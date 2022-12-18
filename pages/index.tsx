@@ -17,12 +17,12 @@ export default function Home() {
       <main className="bg-zinc-900 min-h-screen text-white">
         <NavBar />
 
-        <section className="flex flex-col md:flex-row sm:py-10 min-h-screen">
-          <div className="mt-10 pl-6 sm:pl-10 md:w-2/3 lg:w-auto">
-            <h1 className="text-6xl lg:text-7xl sm:pt-10 font-josefin font-medium flex">
+        <section className="flex flex-col md:flex-row sm:p-10 min-h-screen">
+          <div className="mt-10 pl-6 lg:pl-20 md:w-2/3 lg:w-auto">
+            <h1 className="flex flex-row text-6xl lg:text-7xl md:pt-10 font-josefin font-medium">
               Hey <MdOutlineWavingHand className="mx-5" />
             </h1>
-            <h1 className="text-8xl py-4 md:text-8xl lg:text-9xl font-josefin font-bold transition-transform">I&apos;m Ben Yeung.</h1>
+            <h1 className="text-7xl py-4 md:text-8xl lg:text-9xl font-josefin font-bold transition-transform">I&apos;m Ben Yeung.</h1>
 
             <div className="text-5xl py-2 lg:text-7xl font-monst font-light">
               <Typewriter
@@ -34,8 +34,8 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className="flex flex-grow justify-center items-start lg:mr-20 lg:mt-10">
-            <img className="rounded-full w-2/3 p-10 lg:p-5 md:w-full max-w-xl" src={"/assets/boki.png"} />
+          <div className="flex flex-grow justify-center items-start mt-10">
+            <img className="rounded-full w-2/3 md:p-10 md:w-full max-w-2xl" src={"/assets/boki.png"} />
           </div>
         </section>
 
