@@ -17,14 +17,14 @@ export default function Home() {
       <main className="bg-zinc-900 min-h-screen text-white">
         <NavBar />
 
-        <section className="flex flex-col sm:flex-row p-10 ">
-          <div>
+        <section className="flex flex-col md:flex-row p-10 min-h-screen">
+          <div className="mt-10">
             <h1 className="text-6xl lg:text-7xl sm:pt-10 font-josefin font-medium flex">
               Hey <MdOutlineWavingHand className="mx-5" />
             </h1>
-            <h1 className="text-8xl py-4 xl:text-9xl font-josefin font-bold transition-transform">I&apos;m Ben Yeung.</h1>
+            <h1 className="text-7xl py-4 lg:text-9xl font-josefin font-bold transition-transform">I&apos;m Ben Yeung.</h1>
 
-            <div className="text-5xl py-2 xl:text-7xl font-monst font-light">
+            <div className="text-5xl py-2 lg:text-7xl font-monst font-light">
               <Typewriter
                 options={{
                   strings: ["developer", "nft jpeg trader", "foodie", "lofi enthusiast"],
@@ -41,23 +41,7 @@ export default function Home() {
 
         <section className="flex mt-20 p-10 min-h-screen">
           <div>
-            <h1 className="text-6xl lg:text-7xl sm:pt-10 font-josefin font-medium flex">
-              Hey <MdOutlineWavingHand className="mx-5" />
-            </h1>
-            <h1 className="text-8xl py-4 xl:text-9xl font-josefin font-bold transition-transform">I&apos;m Ben Yeung.</h1>
-
-            <div className="text-5xl py-2 xl:text-7xl font-monst font-light">
-              <Typewriter
-                options={{
-                  strings: ["developer", "nft jpeg trader", "foodie", "lofi enthusiast"],
-                  autoStart: true,
-                  loop: true,
-                }}
-              />
-            </div>
-          </div>
-          <div className="flex flex-grow justify-center items-center aspect-w-16 aspect-h-9">
-            <img className="rounded-full p-10 w-full max-w-2xl" src={"/assets/boki.png"} />
+            <h1 className="text-7xl lg:text-8xl sm:pt-10 font-josefin font-medium flex">About Me</h1>
           </div>
         </section>
       </main>
