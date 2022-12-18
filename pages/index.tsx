@@ -2,6 +2,7 @@ import Head from "next/head";
 import { Inter } from "@next/font/google";
 import styles from "../styles/Home.module.css";
 import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
 import { MdOutlineWavingHand } from "react-icons/md";
 import Typewriter from "typewriter-effect";
 import { motion, AnimatePresence } from "framer-motion";
@@ -125,6 +126,8 @@ export default function Home() {
             <h1 className="text-7xl lg:text-8xl sm:pt-20 font-josefin font-medium flex">About Me</h1>
           </div>
         </section>
+
+        <Footer />
       </main>
     </AnimatePresence>
   );
