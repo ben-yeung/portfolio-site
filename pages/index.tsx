@@ -2,7 +2,7 @@ import Head from "next/head";
 import { Inter } from "@next/font/google";
 import styles from "../styles/Home.module.css";
 import NavBar from "../components/NavBar";
-import { MdOutlineWavingHand } from "react-icons/Md";
+import { MdOutlineWavingHand } from "react-icons/md";
 import Typewriter from "typewriter-effect";
 
 export default function Home() {
