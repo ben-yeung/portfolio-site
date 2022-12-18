@@ -1,29 +1,24 @@
 import React from "react";
-import { BsFillSuitHeartFill } from "react-icons/bs";
+import { BsFillSuitHeartFill, BsLinkedin, BsGithub, BsTwitter, BsInstagram } from "react-icons/bs";
 
 const Footer = () => {
   return (
     <footer className="p-4 bg-white rounded-lg shadow md:px-6 md:py-8 dark:bg-zinc-900">
       <div className="sm:flex sm:items-center sm:justify-between">
-        <ul className="flex mx-auto items-center mb-6 text-sm text-gray-500 sm:mb-0 dark:text-gray-400">
-          <li>
-            <a href="#" className="mr-4 hover:underline md:mr-6 ">
-              Icon
+        <ul className="flex mx-auto items-center mb-6 text-xl text-gray-500 sm:mb-0 dark:text-gray-400">
+          <li className="mx-3 flex items-center justify-center">
+            <a href="https://www.linkedin.com/in/benjaminjyeung/" target="_blank" rel="noreferrer" className="hover:text-boki">
+              <BsLinkedin />
             </a>
           </li>
-          <li>
-            <a href="#" className="mr-4 hover:underline md:mr-6">
-              Icon
+          <li className="mx-3 flex items-center justify-center">
+            <a href="https://github.com/ben-yeung" target="_blank" rel="noreferrer" className="hover:text-boki">
+              <BsGithub />
             </a>
           </li>
-          <li>
-            <a href="#" className="mr-4 hover:underline md:mr-6 ">
-              Icon
-            </a>
-          </li>
-          <li>
-            <a href="#" className="hover:underline">
-              Icon
+          <li className="mx-3 flex items-center justify-center">
+            <a href="https://twitter.com/hypeboosted" target="_blank" rel="noreferrer" className="hover:text-boki">
+              <BsTwitter />
             </a>
           </li>
         </ul>
