@@ -5,7 +5,7 @@ import ssmyLogo from "./assets/SSMYWhite.png";
 const NavBar = () => {
   return (
     <nav className="bg-zinc-900 p-4 flex justify-between min-w-max shadow-lg">
-      <a href="https://ssmytech.com" className="flex items-center" target={"_blank"}>
+      <a href="https://ssmytech.com" className="flex items-center" target="_blank" rel="noreferrer">
         <img className="w-10 object-contain ml-6" src={"/assets/SSMYWhite.png"} />
       </a>
       <ul className="flex justify-end items-center px-5 space-x-6 font-medium text-lg">
