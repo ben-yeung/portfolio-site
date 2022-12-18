@@ -22,7 +22,7 @@ export default function Home() {
             <h1 className="text-6xl lg:text-7xl sm:pt-10 font-josefin font-medium flex">
               Hey <MdOutlineWavingHand className="mx-5" />
             </h1>
-            <h1 className="text-7xl py-4 lg:text-9xl font-josefin font-bold transition-transform">I&apos;m Ben Yeung.</h1>
+            <h1 className="text-7xl py-4 md:text-8xl lg:text-9xl font-josefin font-bold transition-transform">I&apos;m Ben Yeung.</h1>
 
             <div className="text-5xl py-2 lg:text-7xl font-monst font-light">
               <Typewriter
@@ -34,8 +34,8 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className="flex flex-grow justify-center items-start aspect-w-16 aspect-h-9">
-            <img className="rounded-full p-10 w-2/3 sm:w-full max-w-2xl" src={"/assets/boki.png"} />
+          <div className="flex flex-grow justify-center items-start lg:mr-20 mt-10">
+            <img className="rounded-full w-2/3 md:w-full max-w-xl" src={"/assets/boki.png"} />
           </div>
         </section>
 
