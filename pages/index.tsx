@@ -18,7 +18,7 @@ export default function Home() {
         <NavBar />
 
         <section className="flex flex-col md:flex-row sm:py-10 min-h-screen">
-          <div className="mt-10 pl-10 md:w-2/3 lg:w-auto">
+          <div className="mt-10 pl-6 sm:pl-10 md:w-2/3 lg:w-auto">
             <h1 className="text-6xl lg:text-7xl sm:pt-10 font-josefin font-medium flex">
               Hey <MdOutlineWavingHand className="mx-5" />
             </h1>
@@ -34,8 +34,8 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className="flex flex-grow justify-center items-start lg:mr-20 mt-10">
-            <img className="rounded-full w-2/3 md:w-full max-w-xl" src={"/assets/boki.png"} />
+          <div className="flex flex-grow justify-center items-start lg:mr-20 lg:mt-10">
+            <img className="rounded-full w-2/3 p-10 lg:p-5 md:w-full max-w-xl" src={"/assets/boki.png"} />
           </div>
         </section>
 

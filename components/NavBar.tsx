@@ -7,9 +7,9 @@ const NavBar = () => {
   return (
     <nav className="bg-zinc-900 p-4 flex justify-between min-w-max shadow-lg">
       <a href="https://ssmytech.com" className="flex items-center" target="_blank" rel="noreferrer">
-        <img className="w-10 object-contain ml-6" src={"/assets/SSMYWhite.png"} />
+        <img className="w-10 object-contain ml-2 sm:ml-6" src={"/assets/SSMYWhite.png"} />
       </a>
-      <button className="flex justify-end items-center text-white text-2xl sm:hidden">
+      <button className="flex justify-end items-center text-white text-2xl mr-2 sm:hidden">
         <GiHamburgerMenu />
       </button>
       <ul className="hidden sm:flex justify-end items-center px-5 space-x-6 font-medium text-lg">
