@@ -17,8 +17,8 @@ export default function Home() {
       <main className="bg-zinc-900 min-h-screen text-white">
         <NavBar />
 
-        <section className="flex flex-col md:flex-row p-10 min-h-screen">
-          <div className="mt-10">
+        <section className="flex flex-col md:flex-row sm:py-10 min-h-screen">
+          <div className="mt-10 pl-10 md:w-2/3 lg:w-auto">
             <h1 className="text-6xl lg:text-7xl sm:pt-10 font-josefin font-medium flex">
               Hey <MdOutlineWavingHand className="mx-5" />
             </h1>
@@ -34,8 +34,8 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className="flex flex-grow justify-center items-center aspect-w-16 aspect-h-9">
-            <img className="rounded-full p-10 w-full max-w-2xl" src={"/assets/boki.png"} />
+          <div className="flex flex-grow justify-center items-start aspect-w-16 aspect-h-9">
+            <img className="rounded-full p-10 w-2/3 sm:w-full max-w-2xl" src={"/assets/boki.png"} />
           </div>
         </section>
 
