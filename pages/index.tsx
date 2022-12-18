@@ -6,14 +6,13 @@ import { MdOutlineWavingHand } from "react-icons/md";
 import Typewriter from "typewriter-effect";
 import { motion, AnimatePresence } from "framer-motion";
 
-var start = 2500;
+var start = 3000;
 const container = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
     transition: {
       delayChildren: 1,
-      ease: "easeInOut",
     },
   },
 };
@@ -26,31 +25,20 @@ const first = {
     x: 0,
     transition: {
       ease: "easeInOut",
-      duration: 0.5,
+      duration: 1,
     },
   },
 };
 
 // I'm Ben Yeung
 const second = {
-  hidden: { opacity: 0, x: -500 },
+  hidden: { opacity: 0, x: -1000 },
   show: {
     opacity: 1,
     x: 0,
     transition: {
       ease: "easeInOut",
       duration: 1,
-    },
-  },
-};
-
-// Typewriter
-const third = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      duration: 2.5,
     },
   },
 };
@@ -77,12 +65,16 @@ export default function Home() {
               I&apos;m Ben Yeung.
             </motion.h1>
 
-            <motion.div className="text-5xl py-2 lg:text-7xl font-monst font-light" variants={third}>
+            <motion.div
+              className="text-5xl py-2 lg:text-7xl font-monst font-light"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 2 }}
+            >
               <Typewriter
                 onInit={(typewriter) => {
-                  typewriter.pauseFor(start);
-                  start = 1000;
                   typewriter
+                    .pauseFor(start)
                     .typeString("a developer")
                     .pauseFor(1000)
                     .deleteAll()
@@ -106,10 +98,13 @@ export default function Home() {
                     .typeString("a matcha lover")
                     .pauseFor(1000)
                     .deleteAll()
+                    .callFunction(() => {
+                      start = 1000;
+                    })
                     .start();
                 }}
                 options={{
-                  delay: 80,
+                  delay: 70,
                   // autoStart: true,
                   loop: true,
                 }}
@@ -118,7 +113,7 @@ export default function Home() {
           </motion.div>
           <motion.div
             className="flex flex-grow justify-center items-start mt-5 sm:mt-5"
-            initial={{ y: 100, opacity: 0 }}
+            initial={{ y: 200, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 1.5 }}
           >

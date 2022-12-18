@@ -11,7 +11,7 @@ const NavBar = () => {
         className="bg-zinc-900 p-4 flex justify-between min-w-max shadow-lg"
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 1, delay: 0.5 }}
       >
         <a href="https://ssmytech.com" className="flex items-center" target="_blank" rel="noreferrer">
           <img className="w-10 object-contain ml-2" src={"/assets/SSMYWhite.png"} />
