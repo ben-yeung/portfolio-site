@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.switcher {
+  @apply hover:drop-shadow-lg hover:bg-zinc-900;
+}
+
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
