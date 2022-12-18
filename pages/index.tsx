@@ -4,10 +4,60 @@ import styles from "../styles/Home.module.css";
 import NavBar from "../components/NavBar";
 import { MdOutlineWavingHand } from "react-icons/md";
 import Typewriter from "typewriter-effect";
+import { motion, AnimatePresence } from "framer-motion";
+
+var start = 2500;
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      delayChildren: 1,
+      ease: "easeInOut",
+    },
+  },
+};
+
+// Hey
+const first = {
+  hidden: { opacity: 0, x: -500 },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      ease: "easeInOut",
+      duration: 0.5,
+    },
+  },
+};
+
+// I'm Ben Yeung
+const second = {
+  hidden: { opacity: 0, x: -500 },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      ease: "easeInOut",
+      duration: 1,
+    },
+  },
+};
+
+// Typewriter
+const third = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      duration: 2.5,
+    },
+  },
+};
 
 export default function Home() {
   return (
-    <>
+    <AnimatePresence>
       <Head>
         <title>Ben Yeung - Home</title>
         <meta name="description" content="Ben Yeung's Portfolio" />
@@ -18,25 +68,62 @@ export default function Home() {
         <NavBar />
 
         <section className="flex flex-col md:flex-row sm:p-10 min-h-screen">
-          <div className="mt-10 pl-6 lg:pl-20 md:w-2/3 lg:w-auto">
-            <h1 className="flex flex-row text-6xl lg:text-7xl md:pt-10 font-josefin font-medium">
+          <motion.div className="mt-10 pl-6 lg:pl-20 md:w-2/3 lg:w-auto" variants={container} initial="hidden" animate="show">
+            <motion.h1 className="flex flex-row text-6xl lg:text-7xl md:pt-10 font-josefin font-medium" variants={first}>
               Hey <MdOutlineWavingHand className="mx-5" />
-            </h1>
-            <h1 className="text-7xl py-4 md:text-8xl xl:text-9xl font-josefin font-bold transition-transform">I&apos;m Ben Yeung.</h1>
+            </motion.h1>
 
-            <div className="text-5xl py-2 lg:text-7xl font-monst font-light">
+            <motion.h1 className="text-7xl py-4 md:text-8xl xl:text-9xl font-josefin font-bold" variants={second}>
+              I&apos;m Ben Yeung.
+            </motion.h1>
+
+            <motion.div className="text-5xl py-2 lg:text-7xl font-monst font-light" variants={third}>
               <Typewriter
+                onInit={(typewriter) => {
+                  typewriter.pauseFor(start);
+                  start = 1000;
+                  typewriter
+                    .typeString("a developer")
+                    .pauseFor(1000)
+                    .deleteAll()
+                    .pauseFor(1000)
+                    .typeString("an nft jpeg trader")
+                    .pauseFor(1000)
+                    .deleteAll()
+                    .pauseFor(1000)
+                    .typeString("a foodie")
+                    .pauseFor(1000)
+                    .deleteAll()
+                    .pauseFor(1000)
+                    .typeString("a lofi enjoyer")
+                    .pauseFor(1000)
+                    .deleteAll()
+                    .pauseFor(1000)
+                    .typeString("a keeb enthusiast")
+                    .pauseFor(1000)
+                    .deleteAll()
+                    .pauseFor(1000)
+                    .typeString("a matcha lover")
+                    .pauseFor(1000)
+                    .deleteAll()
+                    .start();
+                }}
                 options={{
-                  strings: ["developer", "nft jpeg trader", "foodie", "lofi enthusiast"],
-                  autoStart: true,
+                  delay: 80,
+                  // autoStart: true,
                   loop: true,
                 }}
               />
-            </div>
-          </div>
-          <div className="flex flex-grow justify-center items-start mt-5 sm:mt-5">
+            </motion.div>
+          </motion.div>
+          <motion.div
+            className="flex flex-grow justify-center items-start mt-5 sm:mt-5"
+            initial={{ y: 100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1, delay: 1.5 }}
+          >
             <img className="rounded-full w-2/3 p-5 md:p-10 md:w-full max-w-2xl" src={"/assets/boki.png"} />
-          </div>
+          </motion.div>
         </section>
 
         <section className="flex mt-20 p-10 min-h-screen">
@@ -45,6 +132,6 @@ export default function Home() {
           </div>
         </section>
       </main>
-    </>
+    </AnimatePresence>
   );
 }
