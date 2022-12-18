@@ -22,7 +22,7 @@ export default function Home() {
             <h1 className="text-6xl lg:text-7xl sm:pt-10 font-josefin font-medium flex">
               Hey <MdOutlineWavingHand className="mx-5" />
             </h1>
-            <h1 className="text-7xl py-4 md:text-8xl lg:text-9xl font-josefin font-bold transition-transform">I&apos;m Ben Yeung.</h1>
+            <h1 className="text-8xl py-4 md:text-8xl lg:text-9xl font-josefin font-bold transition-transform">I&apos;m Ben Yeung.</h1>
 
             <div className="text-5xl py-2 lg:text-7xl font-monst font-light">
               <Typewriter
