@@ -34,8 +34,8 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className="flex flex-grow justify-center items-start mt-10">
-            <img className="rounded-full w-2/3 md:p-10 md:w-full max-w-2xl" src={"/assets/boki.png"} />
+          <div className="flex flex-grow justify-center items-start mt-5 sm:mt-10">
+            <img className="rounded-full w-2/3 p-5 md:p-10 md:w-full max-w-2xl" src={"/assets/boki.png"} />
           </div>
         </section>
 
