@@ -8,7 +8,7 @@ const NavBar = () => {
   return (
     <AnimatePresence>
       <motion.nav
-        className="bg-zinc-900 p-4 flex justify-between min-w-max shadow-lg"
+        className="fixed top-0 z-50 bg-zinc-900 p-4 flex justify-between min-w-full shadow-lg "
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1, delay: 0.5 }}
