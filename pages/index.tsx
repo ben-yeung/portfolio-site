@@ -121,8 +121,8 @@ export default function Home() {
         </section>
 
         <section className="flex mt-20 p-10 min-h-screen">
-          <div>
-            <h1 className="text-7xl lg:text-8xl sm:pt-10 font-josefin font-medium flex">About Me</h1>
+          <div className="pl-6 lg:pl-20">
+            <h1 className="text-7xl lg:text-8xl sm:pt-20 font-josefin font-medium flex">About Me</h1>
           </div>
         </section>
       </main>
