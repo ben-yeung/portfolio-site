@@ -53,7 +53,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="dark:bg-zinc-900 min-h-screen dark:text-white">
+      <main className="min-h-screen">
         <NavBar />
         <section className="flex flex-col mt-20 md:flex-row sm:p-10 min-h-screen">
           <motion.div

@@ -4,6 +4,7 @@ import { BsFillSunFill, BsMoonStarsFill } from "react-icons/bs";
 
 const ModeSwitch = () => {
   const { systemTheme, theme, setTheme } = useTheme();
+  const currTheme = theme === "system" ? systemTheme : theme;
 
   const [mounted, setMounted] = useState(false);
 
@@ -21,7 +22,6 @@ const ModeSwitch = () => {
     }
   };
 
-  const currTheme = theme === "system" ? systemTheme : theme;
   return (
     <button className="p-4 rounded-lg switcher" onClick={() => setTheme(currTheme === "dark" ? "light" : "dark")}>
       {renderIcon()}
