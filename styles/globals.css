@@ -7,12 +7,12 @@
 }
 
 .light {
-  @apply bg-white text-black;
+  @apply bg-white text-zinc-800;
 }
 
 .switcher {
-  @apply bg-gray-300 text-gray-900 dark:bg-zinc-800 dark:text-white;
-  @apply hover:drop-shadow-lg hover:bg-gray-200 dark:hover:bg-zinc-700;
+  @apply bg-gray-200 text-gray-700 dark:bg-zinc-800 dark:text-white;
+  @apply hover:drop-shadow-lg hover:bg-gray-300 dark:hover:bg-zinc-700;
 }
 
 .navbutton {

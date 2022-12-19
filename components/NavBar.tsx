@@ -1,20 +1,26 @@
 import React from "react";
-import { GiHamburgerMenu } from "react-icons/gi";
 import { motion, AnimatePresence } from "framer-motion";
 import ModeSwitch from "./ModeSwitch";
 import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { MdClose } from "react-icons/md";
 
 const NavBar = () => {
-  const { systemTheme, theme, setTheme } = useTheme();
+  const { systemTheme, theme } = useTheme();
   const currTheme = theme === "system" ? systemTheme : theme;
   const [mounted, setMounted] = useState(false);
+  const [isOpen, setOpen] = useState(false);
 
   useEffect(() => {
     setMounted(true);
   }, []);
 
   if (!mounted) return null;
+
+  const revealMenu = () => {
+    setOpen(!isOpen);
+  };
 
   return (
     <AnimatePresence>
@@ -31,9 +37,10 @@ const NavBar = () => {
             <img className="w-10 object-contain ml-2" src={"/assets/SSMYBlack.png"} />
           )}
         </a>
-        <button className="flex justify-end items-center dark:text-white text-2xl mr-2 sm:hidden">
-          <GiHamburgerMenu />
+        <button className="flex justify-end items-center text-2xl mr-2 sm:hidden" onClick={revealMenu}>
+          {isOpen ? <MdClose /> : <GiHamburgerMenu />}
         </button>
+
         <ul className="hidden sm:flex items-center mr-2 space-x-6 font-medium text-lg">
           <li>
             <button className="navbutton">Home</button>

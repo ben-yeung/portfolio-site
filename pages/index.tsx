@@ -13,7 +13,7 @@ const container = {
   show: {
     opacity: 1,
     transition: {
-      delayChildren: 1,
+      delayChildren: 1.5,
     },
   },
 };
@@ -26,7 +26,7 @@ const first = {
     x: 0,
     transition: {
       ease: "easeInOut",
-      duration: 1,
+      duration: 1.5,
     },
   },
 };
@@ -39,7 +39,7 @@ const second = {
     x: 0,
     transition: {
       ease: "easeInOut",
-      duration: 1,
+      duration: 2,
     },
   },
 };
@@ -57,21 +57,21 @@ export default function Home() {
         <NavBar />
         <section className="flex flex-col mt-20 md:flex-row sm:p-10 min-h-screen">
           <motion.div
-            className="mt-10 pl-6 md:pl-10 xl:pl-15 xl:ml-10 md:w-2/3 lg:w-auto"
+            className="flex flex-col mt-10 pl-6 md:pl-10 xl:pl-15 xl:ml-10 md:w-2/3 lg:w-auto"
             variants={container}
             initial="hidden"
             animate="show"
           >
-            <motion.h1 className="flex flex-row text-6xl lg:text-7xl md:pt-10 font-josefin font-medium" variants={first}>
+            <motion.h1 className="flex flex-row text-6xl lg:text-7xl md:pt-10  font-josefin font-medium" variants={first}>
               Hey <MdOutlineWavingHand className="mx-5" />
             </motion.h1>
 
-            <motion.h1 className="text-7xl py-4 md:text-8xl xl:text-9xl font-josefin font-bold" variants={second}>
+            <motion.h1 className="text-7xl py-4 md:text-8xl xl:text-9xl xl:pt-6 font-josefin font-bold" variants={second}>
               I&apos;m Ben Yeung.
             </motion.h1>
 
             <motion.div
-              className="text-5xl py-2 lg:text-7xl font-monst font-light"
+              className="text-5xl py-2 lg:text-7xl font-monst font-light text-zinc-600 dark:text-zinc-400"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 2 }}
@@ -128,7 +128,7 @@ export default function Home() {
 
         <section className="flex mt-20 p-10 min-h-screen">
           <div className="pl-6 lg:pl-20">
-            <h1 className="text-7xl lg:text-8xl sm:pt-20 font-josefin font-medium flex"></h1>
+            <h1 className="text-7xl lg:text-8xl sm:pt-20 font-josefin font-medium flex">Under Construction</h1>
           </div>
         </section>
 
