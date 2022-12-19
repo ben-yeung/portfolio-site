@@ -26,7 +26,9 @@ const SpotifyWidget = () => {
             </div>
           ) : (
             <div className="flex flex-row items-center justify-start px-1 text-xl">
-              <BsSpotify />
+              <div className="text-emerald-600">
+                <BsSpotify />
+              </div>
               <div className="flex flex-col items-start text-sm ml-3">Not Playing</div>
             </div>
           )}

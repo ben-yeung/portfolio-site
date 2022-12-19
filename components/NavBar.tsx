@@ -31,21 +31,21 @@ const NavBar = () => {
             <img className="w-10 object-contain ml-2" src={"/assets/SSMYBlack.png"} />
           )}
         </a>
-        <button className="flex justify-end items-center text-white text-2xl mr-2 sm:hidden">
+        <button className="flex justify-end items-center dark:text-white text-2xl mr-2 sm:hidden">
           <GiHamburgerMenu />
         </button>
-        <ul className="hidden sm:flex justify-end items-center mr-2 space-x-6 font-medium text-lg">
+        <ul className="hidden sm:flex items-center mr-2 space-x-6 font-medium text-lg">
           <li>
-            <button className="px-3 py-2 rounded-lg hover:bg-zinc-800">Home</button>
+            <button className="navbutton">Home</button>
           </li>
           <li>
-            <button className="px-3 py-2 rounded-lg hover:bg-zinc-800">About</button>
+            <button className="navbutton">About</button>
           </li>
           <li>
-            <button className="px-3 py-2 rounded-lg hover:bg-zinc-800">Projects</button>
+            <button className="navbutton">Projects</button>
           </li>
           <li>
-            <button className="px-3 py-2 rounded-lg hover:bg-zinc-800">Contact</button>
+            <button className="navbutton">Contact</button>
           </li>
           <li>
             <ModeSwitch />

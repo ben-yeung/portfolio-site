@@ -7,6 +7,10 @@
   @apply hover:drop-shadow-lg hover:bg-gray-200 dark:hover:bg-zinc-700;
 }
 
+.navbutton {
+  @apply px-3 py-2 rounded-lg hover:bg-gray-300 dark:hover:bg-zinc-800;
+}
+
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
