@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 .switcher {
-  @apply hover:drop-shadow-lg hover:bg-zinc-900;
+  @apply bg-gray-300 text-gray-900 dark:bg-zinc-800 dark:text-white;
+  @apply hover:drop-shadow-lg hover:bg-gray-200 dark:hover:bg-zinc-700;
 }
 
 :root {
@@ -62,16 +63,22 @@
   margin: 0;
 }
 
+@layer base {
+  html,
+  body {
+    @apply dark:bg-zinc-900;
+    @apply min-h-screen;
+  }
+}
+
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  background-color: #18181b;
 }
 
 body {
   color: rbg(--foreground-rgb);
-  background-color: #18181b;
 }
 
 a {

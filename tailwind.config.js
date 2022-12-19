@@ -4,6 +4,7 @@ const colors = require("tailwindcss/colors");
 
 module.exports = {
   content: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
+  darkMode: "class",
   theme: {
     fontFamily: {
       monst: ["'Montserrat'", "sans-serif"],
@@ -18,6 +19,12 @@ module.exports = {
       indigo: colors.indigo,
       red: colors.rose,
       yellow: colors.amber,
+      green: colors.green,
+      purple: colors.purple,
+      cyan: colors.cyan,
+      emerald: colors.emerald,
+      sky: colors.sky,
+      rose: colors.rose,
       zinc: colors.zinc,
       boki: "#efd2ff",
     },

@@ -12,13 +12,16 @@ const SpotifyWidget = () => {
       target="_blank"
       rel="noreferrer"
     >
-      <div className="flex flex-row items-center justify-between p-2 dark:bg-zinc-800 rounded-lg">
+      <div className="hidden sm:flex flex-col items-center justify-between shadow-lg p-2 bg-gray-600 text-white dark:bg-zinc-800 dark:text-white rounded-lg">
         <div className="justify-center items-center">
           {data?.isPlaying ? (
-            <div className="flex flex-row justify-center px-1 text-xl">
-              <BsSpotify />
+            <div className="flex flex-row items-center px-1 text-xl">
+              <div className="text-emerald-600">
+                <BsSpotify />
+              </div>
               <div className="flex flex-row items-start text-sm ml-3">
-                <h1 className="font-bold mr-1">{data.title}</h1> <h1>{` by ${data.artist}`}</h1>
+                <h1>Playing</h1>
+                <h1 className="font-bold mx-1">{data.title}</h1> <h1>{`by ${data.artist}`}</h1>
               </div>
             </div>
           ) : (

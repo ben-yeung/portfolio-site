@@ -53,10 +53,15 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="bg-zinc-900 min-h-screen text-white">
+      <main className="dark:bg-zinc-900 min-h-screen dark:text-white">
         <NavBar />
         <section className="flex flex-col mt-20 md:flex-row sm:p-10 min-h-screen">
-          <motion.div className="mt-10 pl-6 lg:pl-20 lg:ml-10 md:w-2/3 lg:w-auto" variants={container} initial="hidden" animate="show">
+          <motion.div
+            className="mt-10 pl-6 md:pl-10 xl:pl-15 xl:ml-10 md:w-2/3 lg:w-auto"
+            variants={container}
+            initial="hidden"
+            animate="show"
+          >
             <motion.h1 className="flex flex-row text-6xl lg:text-7xl md:pt-10 font-josefin font-medium" variants={first}>
               Hey <MdOutlineWavingHand className="mx-5" />
             </motion.h1>
