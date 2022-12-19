@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 
 const NavBar = () => {
   const { systemTheme, theme, setTheme } = useTheme();
-  const currTheme = theme;
+  const currTheme = theme === "system" ? systemTheme : theme;
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
