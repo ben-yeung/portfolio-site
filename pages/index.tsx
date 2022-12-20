@@ -55,7 +55,7 @@ export default function Home() {
       </Head>
       <main className="min-h-screen">
         <NavBar />
-        <section id="hero" className="flex flex-col md:flex-row xl:pt-20 md:px-10  min-h-screen">
+        <section id="hero" className="flex flex-col md:flex-row pt-20 md:px-10  min-h-screen">
           <motion.div
             className="flex flex-col pt-10 md:pt-20 lg:mt-10 pl-6 md:pl-10 xl:pl-15 xl:ml-10 md:w-2/3 lg:w-auto"
             variants={container}
