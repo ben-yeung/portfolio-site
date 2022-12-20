@@ -20,7 +20,7 @@
 }
 
 .section {
-  @apply pt-20 m-10;
+  @apply pt-20;
 }
 
 :root {
