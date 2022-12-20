@@ -19,8 +19,8 @@
   @apply px-3 py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-zinc-800;
 }
 
-.herolarge {
-  padding-top: 10rem;
+.section {
+  @apply pt-20 m-10;
 }
 
 :root {

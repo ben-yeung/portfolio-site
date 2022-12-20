@@ -26,7 +26,7 @@ const first = {
     x: 0,
     transition: {
       ease: "easeInOut",
-      duration: 1.5,
+      duration: 1,
     },
   },
 };
@@ -39,7 +39,7 @@ const second = {
     x: 0,
     transition: {
       ease: "easeInOut",
-      duration: 1.5,
+      duration: 1,
     },
   },
 };
@@ -117,7 +117,7 @@ export default function Home() {
             </motion.div>
           </motion.div>
           <motion.div
-            className="flex flex-grow justify-center items-start pt-10 md:pt-20 md:mr-10"
+            className="flex flex-grow justify-center items-start pt-10 md:pt-20 md:mr-10 xl:mr-0"
             initial={{ y: 200, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 1.5 }}
@@ -126,19 +126,19 @@ export default function Home() {
           </motion.div>
         </section>
 
-        <section id="about" className="flex pt-20 min-h-screen">
+        <section id="about" className="flex section min-h-screen">
           <div className="px-6 pt-10 lg:pl-20">
             <h1 className="text-6xl lg:text-7xl font-josefin font-medium flex">About Me</h1>
           </div>
         </section>
 
-        <section id="projects" className="flex pt-20 min-h-screen">
+        <section id="projects" className="flex section min-h-screen">
           <div className="px-6 pt-10 lg:pl-20">
             <h1 className="text-6xl lg:text-7xl font-josefin font-medium flex">Projects</h1>
           </div>
         </section>
 
-        <section id="contact" className="flex pt-20 min-h-screen">
+        <section id="contact" className="flex section min-h-screen">
           <div className="px-6 pt-10 lg:pl-20">
             <h1 className="text-6xl lg:text-7xl font-josefin font-medium flex">Contact Me</h1>
           </div>
