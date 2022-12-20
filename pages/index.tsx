@@ -13,7 +13,7 @@ const container = {
   show: {
     opacity: 1,
     transition: {
-      delayChildren: 1.5,
+      delayChildren: 1,
     },
   },
 };
@@ -39,7 +39,7 @@ const second = {
     x: 0,
     transition: {
       ease: "easeInOut",
-      duration: 2,
+      duration: 1.5,
     },
   },
 };
@@ -55,14 +55,14 @@ export default function Home() {
       </Head>
       <main className="min-h-screen">
         <NavBar />
-        <section className="flex flex-col mt-20 md:flex-row sm:p-10 min-h-screen">
+        <section id="hero" className="flex flex-col md:flex-row pt-20 md:px-10  min-h-screen">
           <motion.div
-            className="flex flex-col mt-10 pl-6 md:pl-10 xl:pl-15 xl:ml-10 md:w-2/3 lg:w-auto"
+            className="flex flex-col pt-10 md:pt-20 lg:mt-10 pl-6 md:pl-10 xl:pl-15 xl:ml-10 md:w-2/3 lg:w-auto"
             variants={container}
             initial="hidden"
             animate="show"
           >
-            <motion.h1 className="flex flex-row text-6xl lg:text-7xl md:pt-10  font-josefin font-medium" variants={first}>
+            <motion.h1 className="flex flex-row text-6xl lg:text-7xl md:pt-10 font-josefin font-medium" variants={first}>
               Hey <MdOutlineWavingHand className="mx-5" />
             </motion.h1>
 
@@ -117,7 +117,7 @@ export default function Home() {
             </motion.div>
           </motion.div>
           <motion.div
-            className="flex flex-grow justify-center items-start mt-5 sm:mt-5"
+            className="flex flex-grow justify-center items-start pt-10 md:pt-20 md:mr-10"
             initial={{ y: 200, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 1.5 }}
@@ -126,9 +126,21 @@ export default function Home() {
           </motion.div>
         </section>
 
-        <section className="flex mt-20 p-10 min-h-screen">
-          <div className="pl-6 lg:pl-20">
-            <h1 className="text-7xl lg:text-8xl sm:pt-20 font-josefin font-medium flex">Under Construction</h1>
+        <section id="about" className="flex pt-20 min-h-screen">
+          <div className="px-6 pt-10 lg:pl-20">
+            <h1 className="text-6xl lg:text-7xl font-josefin font-medium flex">About Me</h1>
+          </div>
+        </section>
+
+        <section id="projects" className="flex pt-20 min-h-screen">
+          <div className="px-6 pt-10 lg:pl-20">
+            <h1 className="text-6xl lg:text-7xl font-josefin font-medium flex">Projects</h1>
+          </div>
+        </section>
+
+        <section id="contact" className="flex pt-20 min-h-screen">
+          <div className="px-6 pt-10 lg:pl-20">
+            <h1 className="text-6xl lg:text-7xl font-josefin font-medium flex">Contact Me</h1>
           </div>
         </section>
 

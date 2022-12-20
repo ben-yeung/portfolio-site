@@ -43,16 +43,48 @@ const NavBar = () => {
 
         <ul className="hidden sm:flex items-center mr-2 space-x-6 font-medium text-lg">
           <li>
-            <button className="navbutton">Home</button>
+            <button
+              className="navbutton"
+              onClick={() => {
+                let home = document.getElementById("hero");
+                home && home.scrollIntoView({ behavior: "smooth", block: "start" });
+              }}
+            >
+              Home
+            </button>
           </li>
           <li>
-            <button className="navbutton">About</button>
+            <button
+              className="navbutton"
+              onClick={() => {
+                let about = document.getElementById("about");
+                about && about.scrollIntoView({ behavior: "smooth", block: "start" });
+              }}
+            >
+              About
+            </button>
           </li>
           <li>
-            <button className="navbutton">Projects</button>
+            <button
+              className="navbutton"
+              onClick={() => {
+                let projects = document.getElementById("projects");
+                projects && projects.scrollIntoView({ behavior: "smooth", block: "start" });
+              }}
+            >
+              Projects
+            </button>
           </li>
           <li>
-            <button className="navbutton">Contact</button>
+            <button
+              className="navbutton"
+              onClick={() => {
+                let contact = document.getElementById("contact");
+                contact && contact.scrollIntoView({ behavior: "smooth", block: "start" });
+              }}
+            >
+              Contact
+            </button>
           </li>
           <li>
             <ModeSwitch />
