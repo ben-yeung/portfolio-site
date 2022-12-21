@@ -12,7 +12,7 @@ const SpotifyWidget = () => {
       target="_blank"
       rel="noreferrer"
     >
-      <div className="flex flex-col items-center justify-between shadow-lg p-2 bg-gray-600 text-white dark:bg-zinc-800 dark:text-white rounded-lg">
+      <div className="inline-block items-center justify-center m-auto shadow-lg p-2 bg-gray-600 text-white dark:bg-zinc-800 dark:text-white rounded-lg">
         <div className="justify-center items-center">
           {data?.isPlaying ? (
             <div className="flex flex-row items-center px-1 text-xl">

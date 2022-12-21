@@ -32,10 +32,13 @@ const Footer = () => {
               <BsTwitter />
             </a>
           </li>
-          <li className="flex flex-grow-0 ml-auto text-sm">
+          <li className="hidden sm:flex flex-grow-0 ml-auto text-sm">
             <SpotifyWidget />
           </li>
         </ul>
+      </div>
+      <div className="flex justify-center items-center w-full sm:hidden ">
+        <SpotifyWidget />
       </div>
       <hr className="my-3 border-gray-200 sm:mx-auto dark:border-gray-500 lg:my-6" />
       <span className="flex mx-auto items-center justify-center text-sm text-gray-500 sm:text-center dark:text-gray-400">
