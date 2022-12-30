@@ -57,9 +57,9 @@ export default function Home() {
       </Head>
       <main className="min-h-screen">
         <NavBar />
-        <section id="hero" className="flex flex-col md:flex-row pt-20 md:px-10  min-h-screen">
+        <section id="hero" className="flex flex-col md:flex-row md:px-10 mt-20 min-h-screen">
           <motion.div
-            className="flex flex-col pt-10 md:pt-20 lg:mt-10 pl-6 md:pl-10 xl:pl-15 xl:ml-10 md:w-2/3 lg:w-auto"
+            className="flex flex-col pt-10 md:pt-10 xl:mt-20 pl-6 md:pl-10 xl:pl-15 xl:ml-10 md:w-2/3 lg:w-auto"
             variants={container}
             initial="hidden"
             animate="show"
@@ -73,7 +73,7 @@ export default function Home() {
             </motion.h1>
 
             <motion.div
-              className="text-5xl py-2 lg:text-7xl font-monst font-light text-zinc-600 dark:text-zinc-400"
+              className="text-4xl py-2 md:text-5xl xl:text-7xl font-monst font-light text-zinc-600 dark:text-zinc-400"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 2 }}
@@ -119,7 +119,7 @@ export default function Home() {
             </motion.div>
           </motion.div>
           <motion.div
-            className="flex flex-grow justify-center items-start pt-10 md:pt-20 md:mr-10 xl:mr-0"
+            className="flex flex-grow justify-center items-start pt-10 md:pt-10 xl:pt-20 md:mr-10 xl:mr-0"
             initial={{ y: 200, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 1.5 }}
@@ -145,7 +145,7 @@ export default function Home() {
                 I recently graduated from UC Berkeley (Go Bears! <img className="inline w-6 lg:w-10" src={"/assets/bear.png"} />) with
                 a degree in CS.
               </p>
-              <p className="mt-4">I love building mechanical keyboards whenever I can and have recently been building custom PCs</p>
+              <p className="mt-4 max-w-3xl">I love building mechanical keyboards and smaller form factor PCs whenever I can.</p>
               <p>(a dangerous combo for the wallet).</p>
               <p className="mt-4 text-lg md:text-1xl lg:text-2xl font-light">[Daily Driver: White/Chroma QK65 + Gateron Oil Kings]</p>
               <h1 className="text-2xl mt-10">Current Stack</h1>
