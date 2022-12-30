@@ -146,7 +146,7 @@ export default function Home() {
                 a degree in CS.
               </p>
               <p className="mt-4 max-w-3xl">I love building mechanical keyboards and smaller form factor PCs whenever I can.</p>
-              <p>(a dangerous combo for the wallet).</p>
+              <p>(a dangerous combo for the wallet)</p>
               <p className="mt-4 text-lg md:text-1xl lg:text-2xl font-light">[Daily Driver: White/Chroma QK65 + Gateron Oil Kings]</p>
               <h1 className="text-2xl mt-10">Current Stack</h1>
               <div className="flex flex-col xl:flex-row items-center justify-center mt-5 text-4xl">

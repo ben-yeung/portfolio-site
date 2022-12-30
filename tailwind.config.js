@@ -27,6 +27,7 @@ module.exports = {
       rose: colors.rose,
       zinc: colors.zinc,
       boki: "#efd2ff",
+      egg: { 100: "#f5ebe1", 200: "#a69585", 900: "#877564" },
     },
     extend: {},
   },

@@ -7,12 +7,12 @@
 }
 
 .light {
-  @apply bg-white text-zinc-800;
+  @apply bg-egg-100 text-zinc-800;
 }
 
 .switcher {
-  @apply bg-gray-200 text-gray-700 dark:bg-zinc-800 dark:text-white;
-  @apply hover:drop-shadow-lg hover:bg-gray-300 dark:hover:bg-zinc-700;
+  @apply bg-egg-900 text-egg-100 dark:bg-zinc-800 dark:text-white;
+  @apply hover:drop-shadow-lg hover:bg-egg-200 dark:hover:bg-zinc-700;
 }
 
 .navbutton {
@@ -29,7 +29,7 @@
 }
 
 .hamburgerMenu {
-  @apply absolute w-2/3 min-h-screen m-0 top-0 right-0 bg-white text-zinc-800 dark:bg-zinc-900 dark:text-white;
+  @apply absolute w-2/3 min-h-screen m-0 top-0 right-0 bg-egg-100 text-zinc-800 dark:bg-zinc-800 dark:text-white;
   @apply flex flex-col justify-evenly items-center;
 }
 

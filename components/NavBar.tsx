@@ -26,7 +26,7 @@ const NavBar = () => {
   return (
     <AnimatePresence>
       <motion.nav
-        className="fixed top-0 z-50 bg-white dark:bg-zinc-900 p-4 flex justify-between min-w-full shadow-lg "
+        className="fixed top-0 z-50 bg-egg-100 dark:bg-zinc-900 p-4 flex justify-between min-w-full shadow-lg "
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1, delay: 0.5 }}
@@ -60,13 +60,12 @@ const NavBar = () => {
                 animate={{ x: isOpen ? 0 : "100%" }}
                 exit={{ x: "100%" }}
               >
-                <ul className="w-full">
+                <ul className="w-full ">
                   <li>
                     <button
                       className="menuItem"
                       onClick={() => {
-                        let home = document.getElementById("hero");
-                        home && home.scrollIntoView({ behavior: "smooth", block: "start" });
+                        window.scroll({ top: 0, behavior: "smooth" });
                         toggleMenu();
                       }}
                     >
@@ -110,9 +109,9 @@ const NavBar = () => {
                     </button>
                   </li>
                   <li>
-                    <button className="menuItem">
+                    <div className="menuItem">
                       <ModeSwitch />
-                    </button>
+                    </div>
                   </li>
                 </ul>
               </motion.div>
@@ -125,8 +124,7 @@ const NavBar = () => {
             <button
               className="navbutton"
               onClick={() => {
-                let home = document.getElementById("hero");
-                home && home.scrollIntoView({ behavior: "smooth", block: "start" });
+                window.scroll({ top: 0, behavior: "smooth" });
               }}
             >
               Home
