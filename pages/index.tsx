@@ -45,6 +45,17 @@ const second = {
     },
   },
 };
+const third = {
+  hidden: { opacity: 0, y: 2000 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      ease: "easeInOut",
+      duration: 2,
+    },
+  },
+};
 
 export default function Home() {
   return (
@@ -120,9 +131,12 @@ export default function Home() {
           </motion.div>
           <motion.div
             className="flex flex-grow justify-center items-start pt-10 md:pt-10 xl:pt-20 md:mr-10 xl:mr-0"
-            initial={{ y: 200, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 1.5 }}
+            // initial={{ y: 200, opacity: 0 }}
+            // animate={{ y: 0, opacity: 1 }}
+            // transition={{ duration: 1, delay: 1.5 }}
+            variants={third}
+            initial="hidden"
+            animate="show"
           >
             <img className="rounded-full w-2/3 sm:p-10 md:w-full max-w-2xl" src={"/assets/benBERK.png"} />
           </motion.div>
