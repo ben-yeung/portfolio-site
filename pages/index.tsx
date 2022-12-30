@@ -162,7 +162,7 @@ export default function Home() {
               <img className="rounded-full w-2/3 my-10 lg:my-0 lg:w-full max-w-lg rotate-6" src={"/assets/benSSMY.png"} />
             </div>
             <div
-              className="flex flex-col justify-center items-center lg:items-start w-full lg:w-2/3 px-12 md:px-8 lg:mt-10 md:ml-10
+              className="flex flex-col justify-center items-center lg:items-start w-full lg:w-2/3 px-14 md:px-8 lg:mt-10 md:ml-10
                          text-center text-xl md:text-2xl lg:text-2xl xl:text-3xl lg:text-left max-w-3xl lg:max-w-4xl font-monst"
             >
               <p>Hello! I am a full stack web developer building streamline user experiences with an interest in Web3.</p>
@@ -171,7 +171,7 @@ export default function Home() {
                 a degree in CS.
               </p>
               <p className="mt-4 max-w-3xl">I love building mechanical keyboards and smaller form factor PCs whenever I can.</p>
-              <p>(a dangerous combo for the wallet)</p>
+              <p className="text-lg md:text-xl">(a dangerous combo for my wallet)</p>
               <p className="mt-4 text-lg md:text-1xl lg:text-2xl font-light">[Daily Driver: White/Chroma QK65 + Gateron Oil Kings]</p>
 
               <div className="mt-6 text-lg md:text-1xl lg:text-2xl font-semibold">Current Stack</div>
@@ -199,7 +199,7 @@ export default function Home() {
                     <SiNodedotjs />
                   </div>
                   <div
-                    className="ml-4 mr-4 md:ml-0 xl:ml-4 switcher rounded-xl p-2 hover:text-stack-tail"
+                    className="mx-4 switcher rounded-xl p-2 hover:text-stack-tail"
                     onMouseEnter={() => stackHover("Tailwind CSS")}
                     onMouseLeave={() => stackHover("")}
                   >
@@ -208,7 +208,7 @@ export default function Home() {
                 </div>
                 <div className="flex flex-row mt-5 xl:mt-0">
                   <div
-                    className="mx-4 switcher rounded-xl p-2 hover:text-stack-mongo"
+                    className="ml-4 mr-4 md:ml-0 xl:ml-4 switcher rounded-xl p-2 hover:text-stack-mongo"
                     onMouseEnter={() => stackHover("MongoDB")}
                     onMouseLeave={() => stackHover("")}
                   >
