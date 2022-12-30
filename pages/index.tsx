@@ -10,6 +10,8 @@ import { TbBrandNextjs } from "react-icons/tb";
 import { motion, AnimatePresence } from "framer-motion";
 
 var start = 3000;
+
+// Home Section Div Wrapper
 const container = {
   hidden: { opacity: 0 },
   show: {
@@ -45,6 +47,8 @@ const second = {
     },
   },
 };
+
+// Hero Picture
 const third = {
   hidden: { opacity: 0, y: 2000 },
   show: {
@@ -131,9 +135,6 @@ export default function Home() {
           </motion.div>
           <motion.div
             className="flex flex-grow justify-center items-start pt-10 md:pt-10 xl:pt-20 md:mr-10 xl:mr-0"
-            // initial={{ y: 200, opacity: 0 }}
-            // animate={{ y: 0, opacity: 1 }}
-            // transition={{ duration: 1, delay: 1.5 }}
             variants={third}
             initial="hidden"
             animate="show"
