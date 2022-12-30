@@ -174,8 +174,8 @@ export default function Home() {
               <p>(a dangerous combo for the wallet)</p>
               <p className="mt-4 text-lg md:text-1xl lg:text-2xl font-light">[Daily Driver: White/Chroma QK65 + Gateron Oil Kings]</p>
 
-              <div className="pt-5">Current Stack</div>
-              <div className="flex flex-col xl:flex-row items-center justify-center mt-5 text-4xl">
+              <div className="mt-6 text-lg md:text-1xl lg:text-2xl font-semibold">Current Stack</div>
+              <div className="flex flex-col xl:flex-row items-center justify-center mt-4 text-4xl">
                 <div className="flex flex-row">
                   <div
                     className="ml-4 mr-4 md:ml-0 switcher rounded-xl p-2 hover:text-stack-react"
@@ -198,8 +198,6 @@ export default function Home() {
                   >
                     <SiNodedotjs />
                   </div>
-                </div>
-                <div className="flex flex-row mt-5 xl:mt-0">
                   <div
                     className="ml-4 mr-4 md:ml-0 xl:ml-4 switcher rounded-xl p-2 hover:text-stack-tail"
                     onMouseEnter={() => stackHover("Tailwind CSS")}
@@ -207,6 +205,8 @@ export default function Home() {
                   >
                     <SiTailwindcss />
                   </div>
+                </div>
+                <div className="flex flex-row mt-5 xl:mt-0">
                   <div
                     className="mx-4 switcher rounded-xl p-2 hover:text-stack-mongo"
                     onMouseEnter={() => stackHover("MongoDB")}
