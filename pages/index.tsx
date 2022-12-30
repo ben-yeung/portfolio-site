@@ -5,6 +5,8 @@ import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 
 import { MdOutlineWavingHand } from "react-icons/md";
+import { SiReact, SiMongodb, SiNodedotjs, SiJavascript, SiTypescript, SiSelenium, SiTailwindcss, SiJava } from "react-icons/si";
+import { TbBrandNextjs } from "react-icons/tb";
 import { motion, AnimatePresence } from "framer-motion";
 
 var start = 3000;
@@ -122,25 +124,74 @@ export default function Home() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 1.5 }}
           >
-            <img className="rounded-full w-2/3 p-5 md:p-10 md:w-full max-w-2xl" src={"/assets/benBERK.png"} />
+            <img className="rounded-full w-2/3 sm:p-10 md:w-full max-w-2xl" src={"/assets/benBERK.png"} />
           </motion.div>
         </section>
 
-        <section id="about" className="flex section min-h-screen">
+        <section id="about" className="flex flex-col section min-h-screen">
           <div className="px-6 pt-10 lg:pl-20">
-            <h1 className="text-6xl lg:text-7xl font-josefin font-medium flex">About Me</h1>
+            <h1 className="text-6xl lg:text-7xl font-josefin font-medium text-center lg:text-left">About Me</h1>
+          </div>
+          <div className="flex flex-col items-center lg:items-start justify-center lg:flex-row lg:mt-20 lg:px-10">
+            <div className="flex justify-center">
+              <img className="rounded-full w-2/3 my-10 lg:my-0 lg:w-full max-w-lg rotate-6" src={"/assets/benSSMY.png"} />
+            </div>
+            <div
+              className="flex flex-col justify-center items-center lg:items-start w-full lg:w-2/3 px-12 md:px-8 lg:mt-10 md:ml-10
+                         text-center text-xl md:text-2xl lg:text-2xl xl:text-3xl lg:text-left max-w-3xl lg:max-w-4xl font-monst"
+            >
+              <p>Hello! I am a full stack web developer building streamline user experiences with an interest in Web3.</p>
+              <p className="mt-4">
+                I recently graduated from UC Berkeley (Go Bears! <img className="inline w-6 lg:w-10" src={"/assets/bear.png"} />) with
+                a degree in CS.
+              </p>
+              <p className="mt-4">I love building mechanical keyboards whenever I can and have recently been building custom PCs</p>
+              <p>(a dangerous combo for the wallet).</p>
+              <p className="mt-4 text-lg md:text-1xl lg:text-2xl font-light">[Daily Driver: White/Chroma QK65 + Gateron Oil Kings]</p>
+              <h1 className="text-2xl mt-10">Current Stack</h1>
+              <div className="flex flex-col xl:flex-row items-center justify-center mt-5 text-4xl">
+                <div className="flex flex-row">
+                  <div className="ml-4 mr-4 xl:ml-0 switcher rounded-xl p-2">
+                    <SiReact />
+                  </div>
+                  <div className="mx-4 switcher rounded-xl p-2">
+                    <TbBrandNextjs />
+                  </div>
+                  <div className="mx-4 switcher rounded-xl p-2">
+                    <SiMongodb />
+                  </div>
+                  <div className="mx-4 switcher rounded-xl p-2">
+                    <SiNodedotjs />
+                  </div>
+                </div>
+                <div className="flex flex-row mt-5 xl:mt-0">
+                  <div className="mx-4 switcher rounded-xl p-2">
+                    <SiTailwindcss />
+                  </div>
+                  <div className="mx-4 switcher rounded-xl p-2">
+                    <SiJavascript />
+                  </div>
+                  <div className="mx-4 switcher rounded-xl p-2">
+                    <SiTypescript />
+                  </div>
+                  <div className="mx-4 switcher rounded-xl p-2">
+                    <SiSelenium />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
-        <section id="projects" className="flex section min-h-screen">
+        <section id="projects" className="flex flex-col section min-h-screen">
           <div className="px-6 pt-10 lg:pl-20">
-            <h1 className="text-6xl lg:text-7xl font-josefin font-medium flex">Projects</h1>
+            <h1 className="text-6xl lg:text-7xl font-josefin font-medium text-center lg:text-left">Projects</h1>
           </div>
         </section>
 
-        <section id="contact" className="flex section min-h-screen">
+        <section id="contact" className="flex flex-col section min-h-screen">
           <div className="px-6 pt-10 lg:pl-20">
-            <h1 className="text-6xl lg:text-7xl font-josefin font-medium flex">Contact Me</h1>
+            <h1 className="text-6xl lg:text-7xl font-josefin font-medium text-center lg:text-left">Contact Me</h1>
           </div>
         </section>
 
