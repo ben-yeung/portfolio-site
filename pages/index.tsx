@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Typewriter from "typewriter-effect";
+import { useState } from "react";
 
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
@@ -18,6 +19,7 @@ const container = {
     opacity: 1,
     transition: {
       delayChildren: 1,
+      staggerChildren: 0.1,
     },
   },
 };
@@ -30,38 +32,45 @@ const first = {
     x: 0,
     transition: {
       ease: "easeInOut",
-      duration: 1,
+      duration: 0.8,
     },
   },
 };
 
 // I'm Ben Yeung
 const second = {
-  hidden: { opacity: 0, x: -1000 },
+  hidden: { opacity: 0, x: -800 },
   show: {
     opacity: 1,
     x: 0,
     transition: {
       ease: "easeInOut",
-      duration: 1,
+      duration: 0.8,
     },
   },
 };
 
 // Hero Picture
 const third = {
-  hidden: { opacity: 0, y: 2000 },
+  hidden: { opacity: 0, y: 150 },
   show: {
     opacity: 1,
     y: 0,
     transition: {
+      delay: 1.5,
       ease: "easeInOut",
-      duration: 2,
+      duration: 0.8,
     },
   },
 };
 
 export default function Home() {
+  const [stackName, setStackName] = useState("");
+
+  function stackHover(name: string) {
+    setStackName(name);
+  }
+
   return (
     <AnimatePresence>
       <Head>
@@ -72,13 +81,14 @@ export default function Home() {
       </Head>
       <main className="min-h-screen">
         <NavBar />
-        <section id="hero" className="flex flex-col md:flex-row md:px-10 mt-20 min-h-screen">
-          <motion.div
-            className="flex flex-col pt-10 md:pt-10 xl:mt-20 pl-6 md:pl-10 xl:pl-15 xl:ml-10 md:w-2/3 lg:w-auto"
-            variants={container}
-            initial="hidden"
-            animate="show"
-          >
+        <motion.section
+          id="hero"
+          className="flex flex-col md:flex-row md:px-10 mt-20 min-h-screen"
+          variants={container}
+          initial="hidden"
+          animate="show"
+        >
+          <motion.div className="flex flex-col pt-10 md:pt-10 xl:mt-20 pl-6 md:pl-10 xl:pl-15 xl:ml-10 md:w-2/3 lg:w-auto">
             <motion.h1 className="flex flex-row text-6xl lg:text-7xl md:pt-10 font-josefin font-medium" variants={first}>
               Hey <MdOutlineWavingHand className="mx-5" />
             </motion.h1>
@@ -141,10 +151,10 @@ export default function Home() {
           >
             <img className="rounded-full w-2/3 sm:p-10 md:w-full max-w-2xl" src={"/assets/benBERK.png"} />
           </motion.div>
-        </section>
+        </motion.section>
 
         <section id="about" className="flex flex-col section min-h-screen">
-          <div className="px-6 pt-10 lg:pl-20">
+          <div className="px-6 pt-10 lg:pl-20 h-full">
             <h1 className="text-6xl lg:text-7xl font-josefin font-medium text-center lg:text-left">About Me</h1>
           </div>
           <div className="flex flex-col items-center lg:items-start justify-center lg:flex-row lg:mt-20 lg:px-10">
@@ -163,37 +173,71 @@ export default function Home() {
               <p className="mt-4 max-w-3xl">I love building mechanical keyboards and smaller form factor PCs whenever I can.</p>
               <p>(a dangerous combo for the wallet)</p>
               <p className="mt-4 text-lg md:text-1xl lg:text-2xl font-light">[Daily Driver: White/Chroma QK65 + Gateron Oil Kings]</p>
-              <h1 className="text-2xl mt-10">Current Stack</h1>
+
+              <div className="pt-5">Current Stack</div>
               <div className="flex flex-col xl:flex-row items-center justify-center mt-5 text-4xl">
                 <div className="flex flex-row">
-                  <div className="ml-4 mr-4 xl:ml-0 switcher rounded-xl p-2">
+                  <div
+                    className="ml-4 mr-4 md:ml-0 switcher rounded-xl p-2 hover:text-stack-react"
+                    onMouseEnter={() => stackHover("React")}
+                    onMouseLeave={() => stackHover("")}
+                  >
                     <SiReact />
                   </div>
-                  <div className="mx-4 switcher rounded-xl p-2">
+                  <div
+                    className="mx-4 switcher rounded-xl p-2 hover:text-stack-next"
+                    onMouseEnter={() => stackHover("Next.js")}
+                    onMouseLeave={() => stackHover("")}
+                  >
                     <TbBrandNextjs />
                   </div>
-                  <div className="mx-4 switcher rounded-xl p-2">
-                    <SiMongodb />
-                  </div>
-                  <div className="mx-4 switcher rounded-xl p-2">
+                  <div
+                    className="mx-4 switcher rounded-xl p-2 hover:text-stack-node"
+                    onMouseEnter={() => stackHover("Node.js")}
+                    onMouseLeave={() => stackHover("")}
+                  >
                     <SiNodedotjs />
                   </div>
                 </div>
                 <div className="flex flex-row mt-5 xl:mt-0">
-                  <div className="mx-4 switcher rounded-xl p-2">
+                  <div
+                    className="ml-4 mr-4 md:ml-0 xl:ml-4 switcher rounded-xl p-2 hover:text-stack-tail"
+                    onMouseEnter={() => stackHover("Tailwind CSS")}
+                    onMouseLeave={() => stackHover("")}
+                  >
                     <SiTailwindcss />
                   </div>
-                  <div className="mx-4 switcher rounded-xl p-2">
+                  <div
+                    className="mx-4 switcher rounded-xl p-2 hover:text-stack-mongo"
+                    onMouseEnter={() => stackHover("MongoDB")}
+                    onMouseLeave={() => stackHover("")}
+                  >
+                    <SiMongodb />
+                  </div>
+                  <div
+                    className="mx-4 switcher rounded-xl p-2 hover:text-stack-js"
+                    onMouseEnter={() => stackHover("JavaScript")}
+                    onMouseLeave={() => stackHover("")}
+                  >
                     <SiJavascript />
                   </div>
-                  <div className="mx-4 switcher rounded-xl p-2">
+                  <div
+                    className="mx-4 switcher rounded-xl p-2 hover:text-stack-ts"
+                    onMouseEnter={() => stackHover("TypeScript")}
+                    onMouseLeave={() => stackHover("")}
+                  >
                     <SiTypescript />
                   </div>
-                  <div className="mx-4 switcher rounded-xl p-2">
+                  <div
+                    className="mx-4 switcher rounded-xl p-2 hover:text-stack-se"
+                    onMouseEnter={() => stackHover("Selenium")}
+                    onMouseLeave={() => stackHover("")}
+                  >
                     <SiSelenium />
                   </div>
                 </div>
               </div>
+              <div className="pt-5 h-5">{stackName}</div>
             </div>
           </div>
         </section>
