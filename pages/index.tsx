@@ -172,7 +172,12 @@ export default function Home() {
               </p>
               <p className="mt-4 max-w-3xl">I love building mechanical keyboards and smaller form factor PCs whenever I can.</p>
               <p className="text-lg md:text-xl">(a dangerous combo for my wallet)</p>
-              <p className="mt-4 text-lg md:text-1xl lg:text-2xl font-light">[Daily Driver: White/Chroma QK65 + Gateron Oil Kings]</p>
+              <p className="mt-4 text-lg md:text-1xl lg:text-2xl font-light">
+                Daily Driver:{" "}
+                <a href="https://www.youtube.com/watch?v=HIblNCmBgrs" target="_blank" rel="noreferrer" className="underline">
+                  White/Chroma QK65 + Gateron Oil Kings
+                </a>
+              </p>
 
               <div className="mt-6 text-lg md:text-1xl lg:text-2xl font-semibold">Current Stack</div>
               <div className="flex flex-col xl:flex-row items-center justify-center mt-4 text-4xl">
