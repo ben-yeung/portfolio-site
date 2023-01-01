@@ -88,7 +88,7 @@ export default function Home() {
           initial="hidden"
           animate="show"
         >
-          <motion.div className="flex flex-col pt-10 md:pt-10 xl:mt-20 pl-6 md:pl-10 xl:pl-15 xl:ml-10 md:w-2/3 lg:w-auto">
+          <motion.div className="flex flex-col pt-10 md:pt-10 lg:mt-10 xl:mt-20 pl-6 md:pl-10 xl:pl-15 xl:ml-10 md:w-2/3 lg:w-auto">
             <motion.h1 className="flex flex-row text-6xl lg:text-7xl md:pt-10 font-josefin font-medium" variants={first}>
               Hey <MdOutlineWavingHand className="mx-5" />
             </motion.h1>
