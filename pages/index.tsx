@@ -4,6 +4,7 @@ import { useState } from "react";
 
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
+import Spotlight from "../components/Spotlight";
 
 import { MdOutlineWavingHand } from "react-icons/md";
 import { SiReact, SiMongodb, SiNodedotjs, SiJavascript, SiTypescript, SiSelenium, SiTailwindcss, SiJava } from "react-icons/si";
@@ -250,6 +251,29 @@ export default function Home() {
         <section id="projects" className="flex flex-col section min-h-screen">
           <div className="px-6 pt-10 lg:pl-20">
             <h1 className="text-6xl lg:text-7xl font-josefin font-medium text-center lg:text-left">Projects</h1>
+          </div>
+          <div className="flex flex-col pt-10 lg:px-10 lg:flex-row w-full justify-center items-center">
+            <Spotlight
+              name="nft-vision"
+              desc="desc"
+              thumb="/assets/nftvision.png"
+              source="https://github.com/ben-yeung/nft-vision-discord"
+            />
+            <Spotlight name="ben-bot" desc="desc" thumb="/assets/benb0t.png" source="https://github.com/ben-yeung/ben-b0t" />
+          </div>
+          <div className="flex flex-col lg:px-10 lg:flex-row w-full justify-center items-center">
+            <Spotlight
+              name="mirror-mirror"
+              desc="desc"
+              thumb="/assets/mirrormirror.png"
+              source="https://github.com/ben-yeung/mirror-mirror-public"
+            />
+            <Spotlight
+              name="stock-Xtension"
+              desc="desc"
+              thumb="/assets/stockxtension.png"
+              source="https://github.com/ben-yeung/stock-Xtension"
+            />
           </div>
         </section>
 
