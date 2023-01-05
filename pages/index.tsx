@@ -282,11 +282,11 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="contact" className="flex flex-col section min-h-screen">
+        {/* <section id="contact" className="flex flex-col section min-h-screen">
           <div className="px-6 pt-10 lg:pl-20">
             <h1 className="text-6xl lg:text-7xl font-josefin font-medium text-center lg:text-left">Contact Me</h1>
           </div>
-        </section>
+        </section> */}
 
         <Footer />
       </main>
