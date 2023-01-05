@@ -3,18 +3,13 @@ import { BiLinkAlt } from "react-icons/bi";
 
 const Spotlight = (props) => {
   return (
-    <div className="flex flex-row items-center justify-start w-3/4 mt-5 mx-5 px-5 lg:mt-10 lg:mx- xl:mt-10 lg:w-1/2 bg-egg-200 text-white dark:bg-zinc-800 rounded-3xl drop-shadow-xl">
-      <img src={props.thumb} alt="project_thumb" className="w-1/2 xl:w-1/3 p-4 xl:p-8 rounded-xl" />
+    <div className="flex flex-row items-center justify-start w-3/4 mt-5 mx-5 px-4 xl:py-10 lg:mt-10 xl:w-1/2 bg-egg-200 text-white dark:bg-zinc-800 rounded-3xl drop-shadow-xl">
+      <img src={props.thumb} alt="project_thumb" className="w-1/2 xl:w-1/3 p-6 md:p-8 2xl:p-10 rounded-xl" />
       <div>
-        <a
-          href={props.source}
-          className="flex flex-row items-center text-4xl md:text-5xl lg:text-4xl xl:text-5xl underline"
-          target="_blank"
-          rel="noreferrer"
-        >
-          {props.name}
+        <a href={props.source} className="flex flex-row items-center text-4xl" target="_blank" rel="noreferrer">
+          <h1 className="underline">{props.name}</h1>
         </a>
-        {/* <p className="hidden xl:flex text-xl lg:text-2xl mt-4">{props.desc}</p> */}
+        <p className="hidden md:flex text-xl 2xl:text-2xl mt-4 pr-10">{props.desc}</p>
       </div>
     </div>
   );
