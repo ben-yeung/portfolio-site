@@ -266,7 +266,7 @@ export default function Home() {
               source="https://github.com/ben-yeung/ben-b0t"
             />
           </div>
-          <div className="flex flex-col lg:px-20 lg:flex-row w-full justify-center items-center">
+          <div className="flex flex-col xl:px-20 xl:flex-row w-full justify-center items-center">
             <Spotlight
               name="mirror-mirror"
               desc="A Discord bot that gives channel scraping a convenient interface for managing mirrors."
