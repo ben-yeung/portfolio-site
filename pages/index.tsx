@@ -89,7 +89,7 @@ export default function Home() {
           initial="hidden"
           animate="show"
         >
-          <motion.div className="flex flex-col pt-10 md:pt-10 lg:mt-10 xl:mt-20 pl-6 md:pl-10 xl:pl-15 xl:ml-10 md:w-2/3 lg:w-auto">
+          <motion.div className="flex flex-col pt-10 md:pt-10 lg:mt-10 xl:mt-20 pl-10 md:pl-10 xl:pl-16 xl:ml-10 md:w-2/3 lg:w-auto">
             <motion.h1 className="flex flex-row text-6xl lg:text-7xl md:pt-10 font-josefin font-medium" variants={first}>
               Hey <MdOutlineWavingHand className="mx-5" />
             </motion.h1>
@@ -158,7 +158,7 @@ export default function Home() {
           <div className="px-6 pt-10 lg:pl-20 h-full">
             <h1 className="text-6xl lg:text-7xl font-josefin font-medium text-center lg:text-left">About Me</h1>
           </div>
-          <div className="flex flex-col items-center lg:items-start justify-center lg:flex-row lg:mt-20 lg:px-10">
+          <div className="flex flex-col items-center lg:items-start justify-center lg:flex-row lg:mt-10 xl:mt-20 lg:px-10">
             <div className="flex justify-center">
               <img className="rounded-full w-2/3 my-10 lg:my-0 lg:w-full max-w-lg rotate-6" src={"/assets/benSSMY.png"} />
             </div>
@@ -252,7 +252,7 @@ export default function Home() {
           <div className="px-6 pt-10 lg:pl-20">
             <h1 className="text-6xl lg:text-7xl font-josefin font-medium text-center lg:text-left">Projects</h1>
           </div>
-          <div className="flex flex-col pt-10 lg:px-10 lg:flex-row w-full justify-center items-center">
+          <div className="flex flex-col lg:px-20 lg:mt-10 lg:flex-row w-full justify-center items-center">
             <Spotlight
               name="nft-vision"
               desc="desc"
@@ -261,7 +261,7 @@ export default function Home() {
             />
             <Spotlight name="ben-bot" desc="desc" thumb="/assets/benb0t.png" source="https://github.com/ben-yeung/ben-b0t" />
           </div>
-          <div className="flex flex-col lg:px-10 lg:flex-row w-full justify-center items-center">
+          <div className="flex flex-col lg:px-20 lg:flex-row w-full justify-center items-center">
             <Spotlight
               name="mirror-mirror"
               desc="desc"
