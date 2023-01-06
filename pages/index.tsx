@@ -154,8 +154,8 @@ export default function Home() {
           </motion.div>
         </motion.section>
 
-        <section id="about" className="flex flex-col section min-h-screen">
-          <div className="px-6 pt-10 lg:pl-20 h-full">
+        <section id="about" className="flex flex-col section min-h-screen my-10">
+          <div className="px-6 pt-20 lg:pl-20 h-full">
             <h1 className="text-6xl lg:text-7xl font-josefin font-medium text-center lg:text-left">About Me</h1>
           </div>
           <div className="flex flex-col items-center lg:items-start justify-center lg:flex-row lg:mt-10 xl:mt-20 lg:px-10">
@@ -248,8 +248,8 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="projects" className="flex flex-col section min-h-screen">
-          <div className="px-6 pt-10 lg:pl-20">
+        <section id="projects" className="flex flex-col section min-h-screen my-10">
+          <div className="px-6 pt-20 lg:pl-20">
             <h1 className="text-6xl lg:text-7xl font-josefin font-medium text-center lg:text-left">Projects</h1>
           </div>
           <div className="flex flex-col xl:px-20 xl:mt-10 xl:flex-row w-full justify-center items-center">
