@@ -46,7 +46,7 @@ select:-webkit-autofill:focus {
 }
 
 .inputmessage {
-  @apply w-full p-6 mt-5 rounded-xl bg-egg-200 dark:bg-zinc-800 duration-500;
+  @apply w-full p-6 mt-5 bg-egg-200 dark:bg-zinc-800 duration-500;
   @apply font-semibold text-lg md:text-xl focus:outline-none;
 }
 
@@ -58,7 +58,7 @@ select:-webkit-autofill:focus {
 }
 
 .menuContainer {
-  @apply absolute w-full min-h-screen top-0 right-0;
+  @apply absolute w-full min-h-screen top-0 right-0 duration-500;
   @apply bg-black/80;
 }
 
@@ -68,7 +68,7 @@ select:-webkit-autofill:focus {
 }
 
 .menuItem {
-  @apply flex flex-row items-center justify-center w-full h-20 my-5 text-2xl;
+  @apply flex flex-row items-center justify-center w-full h-20 my-5 text-2xl duration-500;
 }
 
 :root {

@@ -182,7 +182,7 @@ export default function Home() {
         </motion.section>
 
         <section id="about" className="section">
-          <div className="px-6 pt-20 lg:pl-20 h-full">
+          <div className="px-6 mt-10 lg:pl-20 h-full">
             <h1 className="text-6xl lg:text-7xl font-josefin font-medium text-center lg:text-left">About Me</h1>
           </div>
           <div className="flex flex-col items-center lg:items-start justify-center lg:flex-row lg:mt-10 xl:mt-20 lg:px-10">
@@ -276,7 +276,7 @@ export default function Home() {
         </section>
 
         <section id="projects" className="section">
-          <div className="px-6 pt-20 lg:pl-20">
+          <div className="px-6 mt-10 lg:pl-20">
             <h1 className="text-6xl lg:text-7xl font-josefin font-medium text-center lg:text-left">Projects</h1>
           </div>
           <div className="flex flex-col xl:px-20 xl:mt-5 xl:flex-row w-full justify-center items-center">
