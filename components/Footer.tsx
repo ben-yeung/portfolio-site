@@ -47,8 +47,7 @@ const Footer = () => {
       </div>
       <hr className="my-3 border-egg-200 sm:mx-auto dark:border-zinc-700 lg:my-6" />
       <span className="flex mx-auto items-center justify-center text-sm text-egg-900 sm:text-center dark:text-gray-400">
-        © {new Date().getFullYear()} Made with <BsFillSuitHeartFill className="mx-2 text-rose-600" /> by Ben Yeung . All Rights
-        Reserved.
+        © {new Date().getFullYear()} Made with <BsFillSuitHeartFill className="mx-2 text-rose-600" /> by Ben Yeung.
       </span>
     </footer>
   );

@@ -177,12 +177,12 @@ export default function Home() {
             initial="hidden"
             animate="show"
           >
-            <img className="rounded-full w-2/3 sm:p-10 md:w-full max-w-2xl" src={"/assets/benBERK.png"} />
+            <img className="rounded-full w-2/3 sm:p-8 lg:p-12 md:w-full max-w-2xl" src={"/assets/benBERK.png"} />
           </motion.div>
         </motion.section>
 
         <section id="about" className="section">
-          <div className="px-6 mt-10 lg:pl-20 h-full">
+          <div className="px-6 mt-10 xl:mt-20 lg:pl-20 h-full">
             <h1 className="text-6xl lg:text-7xl font-josefin font-medium text-center lg:text-left">About Me</h1>
           </div>
           <div className="flex flex-col items-center lg:items-start justify-center lg:flex-row lg:mt-10 xl:mt-20 lg:px-10">
