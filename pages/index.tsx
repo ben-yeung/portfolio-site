@@ -1,6 +1,8 @@
 import Head from "next/head";
 import Typewriter from "typewriter-effect";
-import { useState } from "react";
+import { useState, useRef } from "react";
+
+import emailjs from "@emailjs/browser";
 
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
@@ -71,6 +73,21 @@ export default function Home() {
   function stackHover(name: string) {
     setStackName(name);
   }
+
+  const form = useRef(null);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm("service_ip5uu5l", "template_3yohaoz", e.currentTarget, `g0K5rR910iY-3ohtl`).then(
+      (result) => {
+        console.log(result.text);
+      },
+      (error) => {
+        console.log(error.text);
+      }
+    );
+  };
 
   return (
     <AnimatePresence>
@@ -154,7 +171,7 @@ export default function Home() {
           </motion.div>
         </motion.section>
 
-        <section id="about" className="flex flex-col section min-h-screen my-10">
+        <section id="about" className="section">
           <div className="px-6 pt-20 lg:pl-20 h-full">
             <h1 className="text-6xl lg:text-7xl font-josefin font-medium text-center lg:text-left">About Me</h1>
           </div>
@@ -248,11 +265,11 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="projects" className="flex flex-col section min-h-screen my-10">
+        <section id="projects" className="section">
           <div className="px-6 pt-20 lg:pl-20">
             <h1 className="text-6xl lg:text-7xl font-josefin font-medium text-center lg:text-left">Projects</h1>
           </div>
-          <div className="flex flex-col xl:px-20 xl:mt-10 xl:flex-row w-full justify-center items-center">
+          <div className="flex flex-col xl:px-20 xl:mt-5 xl:flex-row w-full justify-center items-center">
             <Spotlight
               name="nft-vision"
               desc="Bot to scrape/monitor/query collections on NFT Marketplaces for floor prices, owner ratio, royalties, etc..."
@@ -282,11 +299,23 @@ export default function Home() {
           </div>
         </section>
 
-        {/* <section id="contact" className="flex flex-col section min-h-screen">
-          <div className="px-6 pt-10 lg:pl-20">
-            <h1 className="text-6xl lg:text-7xl font-josefin font-medium text-center lg:text-left">Contact Me</h1>
+        <section id="contact" className="flex flex-col pt-20 justify-center items-center">
+          <div className="px-2 mt-10 lg:w-2/3">
+            <h1 className="text-6xl lg:text-7xl font-josefin font-medium text-center lg:text-left">Let's Chat!</h1>
+            <form
+              ref={form}
+              onSubmit={sendEmail}
+              className="flex flex-col w-full justify-center items-center px-10 md:px-12 lg:px-0 h-full mt-5 mb-20"
+            >
+              <div className="flex flex-row w-full">
+                <input type="name" name="name" className="inputfield mr-5 lg:mr-10" placeholder="Name" />
+                <input type="email" name="email" className="inputfield ml-4 lg:ml-10" placeholder="Email" />
+              </div>
+              <textarea name="message" className="inputmessage" cols={30} rows={8}></textarea>
+              <input type="submit" className="submit" />
+            </form>
           </div>
-        </section> */}
+        </section>
 
         <Footer />
       </main>

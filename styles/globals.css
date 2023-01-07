@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  box-shadow: 0 0 0px 1000px transparent inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
 .dark {
   @apply bg-zinc-900 text-white;
 }
@@ -20,7 +35,25 @@
 }
 
 .section {
-  @apply pt-20;
+  @apply flex flex-col min-h-screen pt-20;
+}
+
+.inputfield {
+  @apply w-1/2 pr-5 pt-5 pb-2 my-5;
+  @apply bg-transparent placeholder-zinc-800 border-b-4 border-egg-200 dark:border-solid dark:border-b-4 dark:border-white  dark:placeholder-white;
+  @apply font-semibold text-lg md:text-xl lg:text-2xl focus:outline-none;
+}
+
+.inputmessage {
+  @apply w-full p-6 mt-5 rounded-xl bg-egg-200 dark:bg-zinc-800;
+  @apply font-semibold text-lg md:text-xl focus:outline-none;
+}
+
+.submit {
+  @apply w-2/3 lg:w-1/2 p-4 mt-10 cursor-pointer rounded-xl;
+  @apply bg-transparent placeholder-zinc-800 border-4 border-egg-200 dark:border-solid dark:border-4 dark:border-white  dark:placeholder-white;
+  @apply font-semibold text-xl lg:text-2xl focus:outline-none;
+  @apply hover:bg-egg-900 hover:text-white dark:hover:text-zinc-900 dark:hover:bg-white duration-500;
 }
 
 .menuContainer {
