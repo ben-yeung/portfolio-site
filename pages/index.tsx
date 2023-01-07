@@ -301,7 +301,7 @@ export default function Home() {
 
         <section id="contact" className="flex flex-col pt-20 justify-center items-center">
           <div className="px-2 mt-10 lg:w-2/3">
-            <h1 className="text-6xl lg:text-7xl font-josefin font-medium text-center lg:text-left">Let's Chat!</h1>
+            <h1 className="text-6xl lg:text-7xl font-josefin font-medium text-center lg:text-left">Let&apos;s Chat!</h1>
             <form
               ref={form}
               onSubmit={sendEmail}
