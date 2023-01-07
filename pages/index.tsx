@@ -69,6 +69,7 @@ const third = {
 
 export default function Home() {
   const [stackName, setStackName] = useState("");
+  const [submitStatus, setSubmitStatus] = useState("Submit");
 
   function stackHover(name: string) {
     setStackName(name);
@@ -79,9 +80,18 @@ export default function Home() {
   const sendEmail = (e) => {
     e.preventDefault();
 
+    console.log(e.target.email.value);
+    if (e.target.name.value == "" || e.target.email.value == "" || e.target.message.value == "") {
+      alert("Field(s) cannot be empty. Please double check!");
+      return;
+    }
+
     emailjs.sendForm("service_ip5uu5l", "template_3yohaoz", e.currentTarget, `g0K5rR910iY-3ohtl`).then(
       (result) => {
-        console.log(result.text);
+        setSubmitStatus("Sent!");
+        e.target.name.value = "";
+        e.target.email.value = "";
+        e.target.message.value = "";
       },
       (error) => {
         console.log(error.text);
@@ -312,7 +322,9 @@ export default function Home() {
                 <input type="email" name="email" className="inputfield ml-4 lg:ml-10" placeholder="Email" />
               </div>
               <textarea name="message" className="inputmessage" cols={30} rows={8}></textarea>
-              <input type="submit" className="submit" />
+              <button className="submit" type="submit">
+                {submitStatus}
+              </button>
             </form>
           </div>
         </section>
