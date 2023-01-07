@@ -4,7 +4,7 @@ import { BsFillSuitHeartFill, BsLinkedin, BsGithub, BsTwitter, BsInstagram } fro
 
 const Footer = () => {
   return (
-    <footer className="p-4 bg-egg-100 rounded-lg shadow md:px-6 md:py-6 dark:bg-zinc-900">
+    <footer className="p-4 bg-egg-100 rounded-lg shadow md:px-6 md:py-6 dark:bg-zinc-900 duration-500">
       <div className="flex justify-center items-center w-full">
         <ul className="flex flex-row justify-center items-center mx-auto mb-6 text-xl text-egg-900 sm:mb-0 dark:text-gray-400">
           <li className="mx-3 flex flex-grow-0 items-center justify-center">

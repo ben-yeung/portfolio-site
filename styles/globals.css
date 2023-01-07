@@ -18,11 +18,11 @@ select:-webkit-autofill:focus {
 }
 
 .dark {
-  @apply bg-zinc-900 text-white;
+  @apply bg-zinc-900 text-white duration-500;
 }
 
 .light {
-  @apply bg-egg-100 text-zinc-800;
+  @apply bg-egg-100 text-zinc-800 duration-500;
 }
 
 .switcher {
@@ -40,12 +40,13 @@ select:-webkit-autofill:focus {
 
 .inputfield {
   @apply w-1/2 pr-5 pt-5 pb-2 my-5;
-  @apply bg-transparent placeholder-zinc-800 border-b-4 border-egg-200 dark:border-solid dark:border-b-4 dark:border-white  dark:placeholder-white;
+  @apply bg-transparent placeholder-zinc-800 border-b-4 border-egg-200 duration-500;
+  @apply dark:border-solid dark:border-b-4 dark:border-white  dark:placeholder-white;
   @apply font-semibold text-lg md:text-xl lg:text-2xl focus:outline-none;
 }
 
 .inputmessage {
-  @apply w-full p-6 mt-5 rounded-xl bg-egg-200 dark:bg-zinc-800;
+  @apply w-full p-6 mt-5 rounded-xl bg-egg-200 dark:bg-zinc-800 duration-500;
   @apply font-semibold text-lg md:text-xl focus:outline-none;
 }
 
