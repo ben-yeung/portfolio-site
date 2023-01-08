@@ -31,7 +31,7 @@ select:-webkit-autofill:focus {
 }
 
 .navbutton {
-  @apply px-3 py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-zinc-800;
+  @apply px-3 py-2 rounded-lg hover:bg-egg-200 dark:hover:bg-zinc-800;
 }
 
 .section {
