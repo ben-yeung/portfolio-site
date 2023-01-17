@@ -1,7 +1,7 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-import ModeSwitch from "./ModeSwitch";
+import ModeSwitch from "./Widgets/ModeSwitch";
 import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";

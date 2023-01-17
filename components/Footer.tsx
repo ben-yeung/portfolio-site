@@ -1,5 +1,5 @@
 import React from "react";
-import SpotifyWidget from "../components/SpotifyWidget";
+import SpotifyWidget from "./Widgets/SpotifyWidget";
 import { BsFillSuitHeartFill, BsLinkedin, BsGithub, BsTwitter, BsInstagram } from "react-icons/bs";
 
 const Footer = () => {

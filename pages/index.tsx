@@ -1,21 +1,21 @@
 import Head from "next/head";
 import Typewriter from "typewriter-effect";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 import emailjs from "@emailjs/browser";
 
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
-import Spotlight from "../components/Spotlight";
+import Spotlight from "../components/Widgets/Spotlight";
 
 import { MdOutlineWavingHand } from "react-icons/md";
 import { SiReact, SiMongodb, SiNodedotjs, SiJavascript, SiTypescript, SiSelenium, SiTailwindcss, SiJava } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useAnimation } from "framer-motion";
 
 var start = 3000;
 
-// Home Section Div Wrapper
+// Hero Section Div Wrapper
 const container = {
   hidden: { opacity: 0 },
   show: {
@@ -28,7 +28,7 @@ const container = {
 };
 
 // Hey
-const first = {
+const hookPhrase = {
   hidden: { opacity: 0, x: -500 },
   show: {
     opacity: 1,
@@ -41,7 +41,7 @@ const first = {
 };
 
 // I'm Ben Yeung
-const second = {
+const nameTitle = {
   hidden: { opacity: 0, x: -800 },
   show: {
     opacity: 1,
@@ -54,7 +54,7 @@ const second = {
 };
 
 // Hero Picture
-const third = {
+const heroPic = {
   hidden: { opacity: 0, y: 150 },
   show: {
     opacity: 1,
@@ -67,16 +67,31 @@ const third = {
   },
 };
 
+// Default Fade In for future section elements
+const fadeUp = {
+  hidden: { opacity: 0, y: 50 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      ease: "easeInOut",
+      duration: 0.5,
+    },
+  },
+};
+
 export default function Home() {
-  const [stackName, setStackName] = useState("");
+  // Contact Form button label status
   const [submitStatus, setSubmitStatus] = useState("Submit");
+  // About section stack elements name on hover
+  const [stackName, setStackName] = useState("");
 
   function stackHover(name: string) {
     setStackName(name);
   }
 
+  // EmailJS integration for contact form
   const form = useRef(null);
-
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -117,11 +132,11 @@ export default function Home() {
           animate="show"
         >
           <motion.div className="flex flex-col pt-10 md:pt-10 lg:mt-10 xl:mt-20 pl-10 md:pl-10 xl:pl-16 xl:ml-10 md:w-2/3 lg:w-auto">
-            <motion.h1 className="flex flex-row text-6xl lg:text-7xl md:pt-10 font-josefin font-medium" variants={first}>
+            <motion.h1 className="flex flex-row text-6xl lg:text-7xl md:pt-10 font-josefin font-medium" variants={hookPhrase}>
               Hey <MdOutlineWavingHand className="mx-5" />
             </motion.h1>
 
-            <motion.h1 className="text-7xl py-4 md:text-8xl xl:text-9xl xl:pt-6 font-josefin font-bold" variants={second}>
+            <motion.h1 className="text-7xl py-4 md:text-8xl xl:text-9xl xl:pt-6 font-josefin font-bold" variants={nameTitle}>
               I&apos;m Ben Yeung.
             </motion.h1>
 
@@ -173,7 +188,7 @@ export default function Home() {
           </motion.div>
           <motion.div
             className="flex flex-grow justify-center items-start pt-10 md:pt-10 xl:pt-20 md:mr-10 xl:mr-0"
-            variants={third}
+            variants={heroPic}
             initial="hidden"
             animate="show"
           >
@@ -182,16 +197,19 @@ export default function Home() {
         </motion.section>
 
         <section id="about" className="section">
-          <div className="px-6 mt-10 h-full lg:pl-20 xl:mt-20">
+          <motion.div className="px-6 mt-10 h-full lg:pl-20 xl:mt-20" variants={fadeUp} initial="hidden" whileInView="show">
             <h1 className="text-6xl lg:text-7xl font-josefin font-medium text-center lg:text-left">About Me</h1>
-          </div>
+          </motion.div>
           <div className="flex flex-col items-center lg:items-start justify-center lg:flex-row lg:mt-10 lg:px-20 xl:mt-20">
-            <div className="flex justify-center">
+            <motion.div className="flex justify-center" variants={fadeUp} initial="hidden" whileInView="show">
               <img className="rounded-full w-2/3 my-10 lg:my-0 lg:w-full max-w-lg rotate-6" src={"/assets/benSSMY.png"} />
-            </div>
-            <div
+            </motion.div>
+            <motion.div
               className="flex flex-col justify-center items-center lg:items-start w-full px-10 lg:px-0 lg:w-2/3 lg:pl-10 xl:mt-10 lg:ml-10
                          text-center text-xl md:text-2xl lg:text-2xl xl:text-3xl lg:text-left max-w-3xl lg:max-w-4xl font-monst"
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="show"
             >
               <p>Hello! I am a full stack web developer building streamline user experiences with an interest in Web3.</p>
               <p className="mt-4">
@@ -271,15 +289,20 @@ export default function Home() {
                 </div>
               </div>
               <div className="pt-5 h-5">{stackName}</div>
-            </div>
+            </motion.div>
           </div>
         </section>
 
         <section id="projects" className="section">
-          <div className="px-6 mt-10 lg:pl-20">
+          <motion.div className="px-6 mt-10 lg:pl-20" variants={fadeUp} initial="hidden" whileInView="show">
             <h1 className="text-6xl lg:text-7xl font-josefin font-medium text-center lg:text-left">Projects</h1>
-          </div>
-          <div className="flex flex-col xl:px-20 xl:mt-5 xl:flex-row w-full justify-center items-center">
+          </motion.div>
+          <motion.div
+            className="flex flex-col xl:px-20 xl:mt-5 xl:flex-row w-full justify-center items-center"
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="show"
+          >
             <Spotlight
               name="nft-vision"
               desc="Bot to scrape/monitor/query collections on NFT Marketplaces for floor prices, owner ratio, royalties, etc..."
@@ -292,8 +315,13 @@ export default function Home() {
               thumb="/assets/benb0t.png"
               source="https://github.com/ben-yeung/ben-b0t"
             />
-          </div>
-          <div className="flex flex-col xl:px-20 xl:flex-row w-full justify-center items-center">
+          </motion.div>
+          <motion.div
+            className="flex flex-col xl:px-20 xl:flex-row w-full justify-center items-center"
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="show"
+          >
             <Spotlight
               name="mirror-mirror"
               desc="A Discord bot that gives channel scraping a convenient interface for managing mirrors."
@@ -306,11 +334,11 @@ export default function Home() {
               thumb="/assets/stockxtension.png"
               source="https://github.com/ben-yeung/stock-Xtension"
             />
-          </div>
+          </motion.div>
         </section>
 
-        <section id="contact" className="flex flex-col pt-20 justify-center items-center">
-          <div className="px-2 mt-10 lg:w-2/3">
+        <section id="contact" className="flex flex-col mt-20 pt-20 justify-center items-center">
+          <motion.div className="px-2 mt-10 lg:w-2/3" variants={fadeUp} initial="hidden" whileInView="show">
             <h1 className="text-6xl lg:text-7xl font-josefin font-medium text-center lg:text-left">Let&apos;s Chat!</h1>
             <form
               ref={form}
@@ -326,7 +354,7 @@ export default function Home() {
                 {submitStatus}
               </button>
             </form>
-          </div>
+          </motion.div>
         </section>
 
         <Footer />
