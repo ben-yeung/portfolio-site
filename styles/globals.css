@@ -20,6 +20,7 @@ select:-webkit-autofill:focus {
 .light::-webkit-scrollbar {
   /* Change the background color */
   background-color: #877564;
+  width: 12px;
 }
 
 /* Select the scrollbar thumb */
@@ -31,6 +32,7 @@ select:-webkit-autofill:focus {
 .dark::-webkit-scrollbar {
   /* Change the background color */
   background-color: #27272a;
+  width: 12px;
 }
 
 /* Select the scrollbar thumb */
