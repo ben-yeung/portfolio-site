@@ -182,15 +182,15 @@ export default function Home() {
         </motion.section>
 
         <section id="about" className="section">
-          <div className="px-6 mt-10 xl:mt-20 lg:pl-20 h-full">
+          <div className="px-6 mt-10 h-full lg:pl-20 xl:mt-20">
             <h1 className="text-6xl lg:text-7xl font-josefin font-medium text-center lg:text-left">About Me</h1>
           </div>
-          <div className="flex flex-col items-center lg:items-start justify-center lg:flex-row lg:mt-10 xl:mt-20 lg:px-10">
+          <div className="flex flex-col items-center lg:items-start justify-center lg:flex-row lg:mt-10 lg:px-20 xl:mt-20">
             <div className="flex justify-center">
               <img className="rounded-full w-2/3 my-10 lg:my-0 lg:w-full max-w-lg rotate-6" src={"/assets/benSSMY.png"} />
             </div>
             <div
-              className="flex flex-col justify-center items-center lg:items-start w-full px-10 md:px-0 lg:w-2/3 lg:pl-10 lg:mt-10 lg:ml-10
+              className="flex flex-col justify-center items-center lg:items-start w-full px-10 lg:px-0 lg:w-2/3 lg:pl-10 xl:mt-10 lg:ml-10
                          text-center text-xl md:text-2xl lg:text-2xl xl:text-3xl lg:text-left max-w-3xl lg:max-w-4xl font-monst"
             >
               <p>Hello! I am a full stack web developer building streamline user experiences with an interest in Web3.</p>
