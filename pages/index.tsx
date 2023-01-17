@@ -1,8 +1,8 @@
 import Head from "next/head";
 import { AnimatePresence } from "framer-motion";
 
-import NavBar from "../components/NavBar";
-import Footer from "../components/Footer";
+import NavBar from "../components/Widgets/NavBar";
+import Footer from "../components/Sections/Footer";
 import HeroSection from "../components/Sections/Hero";
 import AboutSection from "../components/Sections/About";
 import ProjectSection from "../components/Sections/Projects";

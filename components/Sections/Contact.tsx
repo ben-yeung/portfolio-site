@@ -1,19 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { fadeUp } from "../FramerDefaults";
 import emailjs from "@emailjs/browser";
-
-// Default Fade In for future section elements
-const fadeUp = {
-  hidden: { opacity: 0, y: 50 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      ease: "easeInOut",
-      duration: 0.5,
-    },
-  },
-};
 
 const ContactSection = () => {
   const [mounted, setMounted] = useState(false);

@@ -1,21 +1,9 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { fadeUp } from "../FramerDefaults";
 
 import { SiReact, SiMongodb, SiNodedotjs, SiJavascript, SiTypescript, SiSelenium, SiTailwindcss, SiJava } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
-
-// Default Fade In for future section elements
-const fadeUp = {
-  hidden: { opacity: 0, y: 50 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      ease: "easeInOut",
-      duration: 0.5,
-    },
-  },
-};
 
 const AboutSection = () => {
   const [mounted, setMounted] = useState(false);

@@ -18,7 +18,7 @@ const container = {
 };
 
 // Hey
-const hookPhrase = {
+const heroHook = {
   hidden: { opacity: 0, x: -500 },
   show: {
     opacity: 1,
@@ -31,7 +31,7 @@ const hookPhrase = {
 };
 
 // I'm Ben Yeung
-const nameTitle = {
+const heroName = {
   hidden: { opacity: 0, x: -800 },
   show: {
     opacity: 1,
@@ -76,11 +76,11 @@ const HeroSection = () => {
         animate="show"
       >
         <motion.div className="flex flex-col pt-10 md:pt-10 lg:mt-10 xl:mt-20 pl-10 md:pl-10 xl:ml-12 md:w-2/3 lg:w-auto">
-          <motion.h1 className="flex flex-row text-6xl lg:text-7xl md:pt-10 font-josefin font-medium" variants={hookPhrase}>
+          <motion.h1 className="flex flex-row text-6xl lg:text-7xl md:pt-10 font-josefin font-medium" variants={heroHook}>
             Hey <MdOutlineWavingHand className="mx-5" />
           </motion.h1>
 
-          <motion.h1 className="text-7xl py-4 md:text-8xl xl:text-9xl xl:pt-6 font-josefin font-bold" variants={nameTitle}>
+          <motion.h1 className="text-7xl py-4 md:text-8xl xl:text-9xl xl:pt-6 font-josefin font-bold" variants={heroName}>
             I&apos;m Ben Yeung.
           </motion.h1>
 

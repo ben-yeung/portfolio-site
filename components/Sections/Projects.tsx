@@ -1,19 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Spotlight from "../Widgets/Spotlight";
-
-// Default Fade In for future section elements
-const fadeUp = {
-  hidden: { opacity: 0, y: 50 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      ease: "easeInOut",
-      duration: 0.5,
-    },
-  },
-};
+import { fadeUp } from "../FramerDefaults";
 
 const ProjectSection = () => {
   const [mounted, setMounted] = useState(false);
