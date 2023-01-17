@@ -17,6 +17,28 @@ select:-webkit-autofill:focus {
   transition: background-color 5000s ease-in-out 0s;
 }
 
+.light::-webkit-scrollbar {
+  /* Change the background color */
+  background-color: #877564;
+}
+
+/* Select the scrollbar thumb */
+.light::-webkit-scrollbar-thumb {
+  /* Change the background color */
+  background-color: #a69585;
+}
+
+.dark::-webkit-scrollbar {
+  /* Change the background color */
+  background-color: #27272a;
+}
+
+/* Select the scrollbar thumb */
+.dark::-webkit-scrollbar-thumb {
+  /* Change the background color */
+  background-color: #3f3f46;
+}
+
 .dark {
   @apply bg-zinc-900 text-white duration-500;
 }
