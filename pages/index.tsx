@@ -190,7 +190,7 @@ export default function Home() {
               <img className="rounded-full w-2/3 my-10 lg:my-0 lg:w-full max-w-lg rotate-6" src={"/assets/benSSMY.png"} />
             </div>
             <div
-              className="flex flex-col justify-center items-center lg:items-start w-full lg:w-2/3 px-14 md:px-8 lg:mt-10 md:ml-10
+              className="flex flex-col justify-center items-center lg:items-start w-full px-10 md:px-0 lg:w-2/3 lg:pl-10 lg:mt-10 lg:ml-10
                          text-center text-xl md:text-2xl lg:text-2xl xl:text-3xl lg:text-left max-w-3xl lg:max-w-4xl font-monst"
             >
               <p>Hello! I am a full stack web developer building streamline user experiences with an interest in Web3.</p>

@@ -47,7 +47,7 @@ select:-webkit-autofill:focus {
 
 .inputmessage {
   @apply w-full p-6 mt-5 bg-egg-200 dark:bg-zinc-800 duration-500;
-  @apply font-semibold text-lg md:text-xl focus:outline-none;
+  @apply font-semibold text-lg md:text-xl focus:outline-none rounded-xl;
 }
 
 .submit {
