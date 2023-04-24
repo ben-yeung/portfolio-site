@@ -45,8 +45,8 @@ const AboutSection = () => {
           <p className="text-lg md:text-xl">(a dangerous combo for my wallet)</p>
           <p className="mt-4 text-lg md:text-1xl lg:text-2xl font-light">
             Daily Driver:{" "}
-            <a href="https://www.youtube.com/watch?v=HIblNCmBgrs" target="_blank" rel="noreferrer" className="underline">
-              White/Chroma QK65 + Gateron Oil Kings
+            <a href="https://www.youtube.com/watch?v=SQCjNIBbNfs" target="_blank" rel="noreferrer" className="underline">
+              Mode Sonnet w/ Gazzew Boba U4Tx
             </a>
           </p>
 
