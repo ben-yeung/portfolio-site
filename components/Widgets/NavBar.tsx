@@ -33,9 +33,9 @@ const NavBar = () => {
       >
         <a href="https://ssmytech.com" className="flex items-center" target="_blank" rel="noreferrer">
           {currTheme === "dark" ? (
-            <img className="w-10 object-contain ml-2" src={"/assets/SSMYWhite.png"} />
+            <img className="w-10 object-contain ml-2" src={"/assets/logos/SSMYWhite.png"} />
           ) : (
-            <img className="w-10 object-contain ml-2" src={"/assets/SSMYBlack.png"} />
+            <img className="w-10 object-contain ml-2" src={"/assets/logos/SSMYBlack.png"} />
           )}
         </a>
         <button className="absolute right-0 top-0 bottom-0 m-auto text-2xl z-40 mr-5 sm:hidden" onClick={toggleMenu}>
