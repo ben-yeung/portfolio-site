@@ -38,8 +38,7 @@ const AboutSection = () => {
         >
           <p>Hello! I am a full stack web developer building streamline user experiences with an interest in Web3.</p>
           <p className="mt-4">
-            I recently graduated from UC Berkeley (Go Bears! <img className="inline w-6 lg:w-10" src={"/assets/bear.png"} />) with a
-            degree in CS.
+            I recently graduated from UC Berkeley (Go Bears! <img className="inline w-6 lg:w-10" src={"/assets/bear.png"} />) with a degree in CS.
           </p>
           <p className="mt-4 max-w-3xl">I love building mechanical keyboards and smaller form factor PCs whenever I can.</p>
           <p className="text-lg md:text-xl">(a dangerous combo for my wallet)</p>
@@ -55,7 +54,7 @@ const AboutSection = () => {
             <div className="flex flex-row">
               <div
                 className="ml-4 mr-4 md:ml-0 switcher rounded-xl p-2 hover:text-stack-react"
-                onMouseEnter={() => stackHover("React")}
+                onMouseEnter={() => stackHover("React.js")}
                 onMouseLeave={() => stackHover("")}
               >
                 <SiReact />

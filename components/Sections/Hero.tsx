@@ -81,7 +81,7 @@ const HeroSection = () => {
           </motion.h1>
 
           <motion.h1 className="text-7xl py-4 md:text-8xl xl:text-9xl xl:pt-6 font-josefin font-bold" variants={heroName}>
-            I&apos;m Ben Yeung.
+            I&apos;m Ben Yeung
           </motion.h1>
 
           <motion.div
@@ -94,29 +94,26 @@ const HeroSection = () => {
               onInit={(typewriter) => {
                 typewriter
                   .pauseFor(start)
-                  .typeString("a developer")
+                  .typeString("a developer.")
                   .pauseFor(1000)
                   .deleteAll()
-                  .pauseFor(1000)
-                  .typeString("a foodie")
-                  .pauseFor(1000)
-                  .deleteAll()
-                  .pauseFor(1000)
-                  .typeString("an nft trader")
+                  .pauseFor(500)
+                  .typeString("a foodie.")
                   .pauseFor(1000)
                   .deleteAll()
-                  .pauseFor(1000)
-                  .typeString("a lofi enjoyer")
-                  .pauseFor(1000)
-                  .deleteAll()
-                  .pauseFor(1000)
-                  .typeString("a keeb enthusiast")
+                  .pauseFor(500)
+                  .typeString("a lofi enjoyer.")
                   .pauseFor(1000)
                   .deleteAll()
-                  .pauseFor(1000)
-                  .typeString("a matcha lover")
+                  .pauseFor(500)
+                  .typeString("a keeb enthusiast.")
                   .pauseFor(1000)
                   .deleteAll()
+                  .pauseFor(500)
+                  .typeString("a matcha lover.")
+                  .pauseFor(1000)
+                  .deleteAll()
+                  .pauseFor(500)
                   .callFunction(() => {
                     start = 1000;
                   })

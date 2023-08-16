@@ -18,22 +18,12 @@ const Footer = () => {
             </a>
           </li>
           <li className="mx-3 flex flex-grow-0 items-center justify-center">
-            <a
-              href="https://github.com/ben-yeung"
-              target="_blank"
-              rel="noreferrer"
-              className="hover:text-egg-200 dark:hover:text-white"
-            >
+            <a href="https://github.com/ben-yeung" target="_blank" rel="noreferrer" className="hover:text-egg-200 dark:hover:text-white">
               <BsGithub />
             </a>
           </li>
           <li className="mx-3 flex flex-grow-0 items-center justify-center">
-            <a
-              href="https://twitter.com/hypeboosted"
-              target="_blank"
-              rel="noreferrer"
-              className="hover:text-egg-200 dark:hover:text-white"
-            >
+            <a href="https://twitter.com/0xhypxr" target="_blank" rel="noreferrer" className="hover:text-egg-200 dark:hover:text-white">
               <BsTwitter />
             </a>
           </li>
