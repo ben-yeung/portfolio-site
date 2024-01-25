@@ -44,6 +44,14 @@ const ProjectSection = () => {
         awards={["🥇 ETHGlobal Tokyo 2023 Finalist"]}
       />
       <Spotlight
+        name="GHS App"
+        desc="An app created for GHS in the LA region to help aggregate critical resources and information for students, parents, and staff. Features included indexed teacher lookup, GCal/Sheet event parsing, and Firebase integration."
+        thumb="/assets/logos/GHSLogo.png"
+        source="https://github.com/ben-yeung/ghs-app"
+        showcase="/assets/examples/ghsapp_example_1.png"
+        stack={["Swift", "Objective-C"]}
+      />
+      <Spotlight
         name="ben-bot"
         desc="Fully interactive Discord bot built on discord.js v13 with integrations including GCal, Twitch, and other RESTful APIs."
         thumb="/assets/logos/benb0t.png"
