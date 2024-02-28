@@ -8,12 +8,7 @@ const Footer = () => {
       <div className="flex justify-center items-center w-full">
         <ul className="flex flex-row justify-center items-center mx-auto mb-6 text-xl text-egg-900 sm:mb-0 dark:text-gray-400">
           <li className="mx-3 flex flex-grow-0 items-center justify-center">
-            <a
-              href="https://www.linkedin.com/in/benjaminjyeung/"
-              target="_blank"
-              rel="noreferrer"
-              className="hover:text-egg-200 dark:hover:text-white"
-            >
+            <a href="https://www.linkedin.com/in/benjaminjyeung/" target="_blank" rel="noreferrer" className="hover:text-egg-200 dark:hover:text-white">
               <BsLinkedin />
             </a>
           </li>
@@ -23,7 +18,7 @@ const Footer = () => {
             </a>
           </li>
           <li className="mx-3 flex flex-grow-0 items-center justify-center">
-            <a href="https://twitter.com/0xhypxr" target="_blank" rel="noreferrer" className="hover:text-egg-200 dark:hover:text-white">
+            <a href="https://twitter.com/hyperstance" target="_blank" rel="noreferrer" className="hover:text-egg-200 dark:hover:text-white">
               <BsTwitter />
             </a>
           </li>
